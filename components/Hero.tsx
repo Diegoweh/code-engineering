@@ -1,10 +1,10 @@
 'use client';
 
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 export default function Hero() {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -15,38 +15,38 @@ export default function Hero() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
         duration: 0.8,
-        ease: [0.42, 0, 0.58, 1],
+        ease: [0.42, 0, 0.58, 1] as const,
       },
     },
   };
 
-  const logoVariants = {
+  const logoVariants: Variants = {
     hidden: { opacity: 0, scale: 0.8 },
     visible: {
       opacity: 1,
       scale: 1,
       transition: {
         duration: 1,
-        ease: [0.42, 0, 0.58, 1],
+        ease: [0.42, 0, 0.58, 1] as const,
       },
     },
   };
 
-  const tubeVariants = {
+  const tubeVariants: Variants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
         duration: 1,
-        ease: [0.6, -0.05, 0.01, 0.99],
+        ease: [0.6, -0.05, 0.01, 0.99] as const,
       },
     },
   };
@@ -57,7 +57,7 @@ export default function Hero() {
       rotate: [-2, 2, -2],
       transition: {
         duration: 4,
-        ease: "easeInOut",
+        ease: "easeInOut" as const,
         repeat: Infinity,
         repeatType: "loop" as const,
       },

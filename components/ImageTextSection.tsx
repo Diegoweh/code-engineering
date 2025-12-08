@@ -1,8 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
+import { motion, Variants, useInView } from 'framer-motion';
 import { useRef } from 'react';
 
 interface ImageTextSectionProps {
@@ -35,7 +34,7 @@ export default function ImageTextSection({
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -46,26 +45,26 @@ export default function ImageTextSection({
     },
   };
 
-  const imageVariants = {
+  const imageVariants: Variants = {
     hidden: { opacity: 0, x: imagePosition === 'left' ? -50 : 50 },
     visible: {
       opacity: 1,
       x: 0,
       transition: {
         duration: 0.8,
-        ease: [0.6, -0.05, 0.01, 0.99],
+        ease: [0.6, -0.05, 0.01, 0.99] as const,
       },
     },
   };
 
-  const textVariants = {
+  const textVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
         duration: 0.6,
-        ease: [0.42, 0, 0.58, 1],
+        ease: [0.42, 0, 0.58, 1] as const,
       },
     },
   };
