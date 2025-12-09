@@ -65,49 +65,31 @@ export default function Hero() {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative pt-20 px-6 mt-6">
+    <section className="min-h-dvh flex items-center justify-center relative px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16">
       <motion.div
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="max-w-5xl mx-auto flex flex-col items-center text-center"
+        className="w-full max-w-6xl mx-auto flex flex-col items-center text-center"
       >
         {/* Logo */}
-        <motion.div variants={logoVariants} className="mb-8">
+        {/* <motion.div variants={logoVariants} className="mb-6 sm:mb-8 md:mb-10">
           <Image
             src="/img/codeHeroLogo.png"
             alt="Logo"
             width={200}
             height={80}
-            className="h-auto w-auto"
+            className="h-auto w-32 sm:w-40 md:w-48 lg:w-56"
             priority
           />
-        </motion.div>
+        </motion.div> */}
 
-        {/* Imagen del tubo */}
-        <motion.div
-          variants={tubeVariants}
-          className="mb-12 relative"
-        >
-          <motion.div
-            variants={floatingVariants}
-            animate="animate"
-            className="relative"
-          >
-            <Image
-              src="/img/heroTool.png"
-              alt="Tubo"
-              width={400}
-              height={400}
-              className="h-auto w-auto max-w-md drop-shadow-2xl"
-            />
-          </motion.div>
-        </motion.div>
+        
 
         {/* Subtítulo */}
         <motion.p
           variants={itemVariants}
-          className="text-orange-400 text-sm md:text-base font-semibold uppercase tracking-wider mb-4"
+          className="text-orange-400 text-xs sm:text-sm md:text-base font-semibold uppercase tracking-wider mb-3 sm:mb-4"
         >
           Nosotros
         </motion.p>
@@ -115,17 +97,16 @@ export default function Hero() {
         {/* Título */}
         <motion.h1
           variants={itemVariants}
-          className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight px-2"
         >
-          Nuestra filosofía es clara, somos ingeieros que hacemos ingeniería
-          <br />
+          Nuestra filosofía es clara, somos ingenieros que hacemos ingeniería
           {/* <span className="text-orange-400">con Código</span> */}
         </motion.h1>
 
         {/* Párrafo */}
         <motion.p
           variants={itemVariants}
-          className="text-gray-300 text-lg md:text-xl max-w-5xl leading-relaxed"
+          className="text-gray-300 text-base sm:text-lg md:text-xl max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-4xl leading-relaxed px-4 sm:px-6 md:px-0"
         >
           Nos enfocamos en corregir las fallas más comunes en las herramientas actuales, mejorándolos en tres aspectos fundamentales, los hacemos más confiables, más eficientes y más versátiles, generando nuevas herramientas respaldadas por nuestra propia patentes
         </motion.p>
@@ -133,20 +114,40 @@ export default function Hero() {
         {/* CTA opcional */}
         <motion.div
           variants={itemVariants}
-          className="mt-10 flex flex-col sm:flex-row gap-4"
+          className="mt-8 sm:mt-10 md:mt-12 flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto px-4 sm:px-0"
         >
           <a
             href="#contacto"
-            className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-orange-500/50 hover:scale-105"
+            className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 sm:px-8 py-3 sm:py-3.5 rounded-lg transition-all duration-300 shadow-lg hover:shadow-orange-500/50 hover:scale-105 text-sm sm:text-base"
           >
             Comenzar Proyecto
           </a>
           <a
             href="#servicios"
-            className="bg-transparent border-2 border-white/30 hover:border-orange-400 text-white hover:text-orange-400 font-semibold px-8 py-3 rounded-lg transition-all duration-300"
+            className="bg-transparent border-2 border-white/30 hover:border-orange-400 text-white hover:text-orange-400 font-semibold px-6 sm:px-8 py-3 sm:py-3.5 rounded-lg transition-all duration-300 text-sm sm:text-base"
           >
             Ver Productos
           </a>
+        </motion.div>
+        {/* Imagen del tubo */}
+        <motion.div
+          variants={tubeVariants}
+          className="mt-8 sm:mt-10 md:mt-12 relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg"
+        >
+          <motion.div
+            variants={floatingVariants}
+            animate="animate"
+            className="relative w-full"
+          >
+            <Image
+              src="/img/heroTool.png"
+              alt="Tubo"
+              width={500}
+              height={500}
+              className="h-auto w-full drop-shadow-2xl"
+              priority
+            />
+          </motion.div>
         </motion.div>
       </motion.div>
 

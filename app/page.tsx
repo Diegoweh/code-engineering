@@ -10,7 +10,7 @@ export default function Home() {
       <Hero />
 
       {/* Contenido antes del banner para tener scroll */}
-      <div style={{ height: '30vh' }}>
+      <div className="md:h-[20dvh] h-[10dvh]">
         
       </div>
 
@@ -20,6 +20,8 @@ export default function Home() {
         overlayOpacity={0.0}
         overlayColor="bg-black"
         height="screen"
+        showPlayButton={true}
+        autoPlay={false}
       >
         {/* Agrega algún contenido para probar */}
         {/* <h1 className="text-white text-4xl">Título del Banner</h1> */}

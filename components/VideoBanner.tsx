@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -17,6 +17,7 @@ interface VideoBannerProps {
   autoPlay?: boolean;
   loop?: boolean;
   muted?: boolean;
+  showPlayButton?: boolean;
 }
 
 export default function VideoBanner({
@@ -27,19 +28,30 @@ export default function VideoBanner({
   overlayColor = 'bg-black',
   children,
   height = 'screen',
-  autoPlay = true,
+  autoPlay = false,
   loop = true,
   muted = true,
+  showPlayButton = false,
 }: VideoBannerProps) {
   const sectionRef = useRef<HTMLElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
+  const [isPlaying, setIsPlaying] = useState(autoPlay);
 
   const heightClasses = {
     screen: 'min-h-screen',
     half: 'min-h-[50vh]',
     full: 'h-screen',
+  };
+
+  const handlePlay = (e?: React.MouseEvent | React.TouchEvent) => {
+    e?.preventDefault();
+    e?.stopPropagation();
+    setIsPlaying(true);
+    setTimeout(() => {
+      videoRef.current?.play();
+    }, 100);
   };
 
   useEffect(() => {
@@ -133,8 +145,8 @@ export default function VideoBanner({
       {/* Video de fondo */}
       <video
         ref={videoRef}
-        className="absolute top-0 left-0 w-full h-full object-cover scale-110"
-        autoPlay={autoPlay}
+        className="absolute top-0 left-0 w-full h-full object-contain scale-110"
+        autoPlay={showPlayButton ? false : autoPlay}
         loop={loop}
         muted={muted}
         playsInline
@@ -158,6 +170,42 @@ export default function VideoBanner({
       >
         {children}
       </div>
+
+      {/* Play Button - Solo se muestra si showPlayButton es true y no está reproduciendo */}
+      {showPlayButton && !isPlaying && (
+        <button
+          onClick={handlePlay}
+          onTouchEnd={handlePlay}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 sm:w-20 sm:h-20 md:w-28 md:h-28 flex items-center justify-center hover:scale-110 active:scale-95 transition-all touch-manipulation z-30"
+          aria-label="Reproducir video"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 120 120"
+            className="w-full h-full drop-shadow-2xl"
+          >
+            <defs>
+              <linearGradient id="grad-video" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style={{stopColor:'#ff7f00', stopOpacity:1}} />
+                <stop offset="100%" style={{stopColor:'#ff5500', stopOpacity:1}} />
+              </linearGradient>
+            </defs>
+
+            <path
+              d="M 50,10
+                 C 25,10 5,30 5,60
+                 C 5,90 25,110 50,110
+                 C 80,110 115,60 115,60
+                 C 115,60 80,10 50,10 Z
+
+                 M 48,40
+                 A 20,20 0 1,0 48,80
+                 A 20,20 0 1,0 48,40 Z"
+              fill="url(#grad-video)"
+            />
+          </svg>
+        </button>
+      )}
     </section>
   );
 }

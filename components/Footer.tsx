@@ -1,15 +1,16 @@
 import Link from "next/link"
 import Image from "next/image"
+import LogoGlare from "./LogoGlare"
 
 export function Footer() {
   return (
     <footer>
       {/* CTA Section */}
       <section className="py-16 px-4 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Start Investig Smarter Today</h2>
+        {/* <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Start Investig Smarter Today</h2>
         <p className="text-gray-400 max-w-xl mx-auto mb-8">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet mollis ex, eget auctor nunc.
-        </p>
+        </p> */}
         <button className="border border-gray-500 text-gray-300 px-8 py-2 rounded-full hover:bg-gray-800 transition-colors">
           Contacto
         </button>
@@ -27,17 +28,22 @@ export function Footer() {
         </div>
       </section>
 
+      {/* Logo with Glare Effect */}
+      <div className="flex justify-center py-12">
+        <LogoGlare width={500} height={200} />
+      </div>
+
       {/* Blue Line Separator */}
       <div className="h-1 bg-gradient-to-r from-orange-600 via-amber-500 to-orange-600"></div>
 
       {/* Footer Bar */}
       <div className="bg-black/95 py-6 px-4">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             {/* Logo - placeholder, user has their own */}
-            <div className="flex-shrink-0">
+            {/* <div className="flex-shrink-0">
               <Image src="/logoNav.png" alt="CODE Logo" width={120} height={40} className="h-10 w-auto" />
-            </div>
+            </div> */}
 
             {/* Navigation */}
             <nav className="flex items-center gap-6 text-sm text-gray-700">
