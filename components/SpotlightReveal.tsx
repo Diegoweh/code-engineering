@@ -97,7 +97,7 @@ export function SpotlightReveal({ spotlightSize = 250 }: SpotlightRevealProps) {
         }}
       >
         <Image
-          src="/logoNav.svg"
+          src="/logoNav_1920.svg"
           alt="Logo"
           width={500}
           height={173}

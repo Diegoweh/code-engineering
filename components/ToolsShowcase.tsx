@@ -13,7 +13,7 @@ const tools = [
   },
   {
     id: "fluid-rd",
-    name: "FLUID-RD * FLUID +",
+    name: "FLUID - RD • FLUID +",
     videoUrl: "/video/fluid-rd-compressed.mp4",
     thumbnail: "/img/fluid-rd-fluid+.webp",
   },

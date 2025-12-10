@@ -106,13 +106,13 @@ export default function Hero() {
         {/* Párrafo */}
         <motion.p
           variants={itemVariants}
-          className="text-gray-300 text-base sm:text-lg md:text-xl max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-4xl leading-relaxed px-4 sm:px-6 md:px-0"
+          className="text-gray-300 text-start md:text-center text-base sm:text-lg md:text-xl max-w-xs   sm:max-w-lg md:max-w-2xl lg:max-w-4xl leading-relaxed px-4 sm:px-6 md:px-0"
         >
           Nos enfocamos en corregir las fallas más comunes en las herramientas actuales, mejorándolos en tres aspectos fundamentales, los hacemos más confiables, más eficientes y más versátiles, generando nuevas herramientas respaldadas por nuestra propia patentes
         </motion.p>
 
         {/* CTA opcional */}
-        <motion.div
+        {/* <motion.div
           variants={itemVariants}
           className="mt-8 sm:mt-10 md:mt-12 flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto px-4 sm:px-0"
         >
@@ -128,7 +128,7 @@ export default function Hero() {
           >
             Ver Productos
           </a>
-        </motion.div>
+        </motion.div> */}
         {/* Imagen del tubo */}
         <motion.div
           variants={tubeVariants}

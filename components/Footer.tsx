@@ -17,14 +17,24 @@ export function Footer() {
         </button>
 
         {/* Decorative Text */}
-        <div className="mt-16 space-y-2">
-          <p className="text-gray-600 tracking-[0.5em] text-sm md:text-base">
-            C O N T I N U O S &nbsp;&nbsp;&nbsp; D E V E L O P I N G
+        <div className="mt-16 space-y-2 text-center">
+          <p className="text-gray-600 uppercase text-xs sm:text-sm md:text-base
+                        tracking-[0.28em] sm:tracking-[0.4em] md:tracking-[0.5em]
+                        whitespace-nowrap">
+            CONTINUOS&nbsp;DEVELOPING
           </p>
+
           <div className="flex items-center justify-center gap-2">
-            <span className="h-px w-8 bg-orange-500"></span>
-            <p className="text-orange-500 tracking-[0.4em] text-2xl md:text-3xl font-light">E N G I N E E R I N G</p>
-            <span className="h-px w-8 bg-orange-500"></span>
+            <span className="h-px w-6 sm:w-8 bg-orange-500"></span>
+
+            <p className="text-orange-500 uppercase font-light
+                          text-xl sm:text-2xl md:text-3xl
+                          tracking-[0.25em] sm:tracking-[0.32em] md:tracking-[0.4em]
+                          whitespace-nowrap">
+              ENGINEERING
+            </p>
+
+            <span className="h-px w-6 sm:w-8 bg-orange-500"></span>
           </div>
         </div>
       </section>
