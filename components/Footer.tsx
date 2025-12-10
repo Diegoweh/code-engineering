@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import LogoGlare from "./LogoGlare"
+import { SpotlightReveal } from "./SpotlightReveal"
 
 export function Footer() {
   return (
@@ -29,9 +30,11 @@ export function Footer() {
       </section>
 
       {/* Logo with Glare Effect */}
-      <div className="flex justify-center py-12">
+      {/* <div className="flex justify-center py-12">
         <LogoGlare width={500} height={200} />
-      </div>
+      </div> */}
+
+      <SpotlightReveal spotlightSize={200} />
 
       {/* Blue Line Separator */}
       <div className="h-1 bg-gradient-to-r from-orange-600 via-amber-500 to-orange-600"></div>
