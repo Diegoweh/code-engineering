@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react"
 import { Play, ArrowRight } from "lucide-react"
+import Image from "next/image"
 
 const tools = [
   {
@@ -102,31 +103,13 @@ export function ToolsShowcase() {
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 sm:w-20 sm:h-20 flex items-center justify-center hover:scale-110 active:scale-95 transition-all touch-manipulation z-10"
                 aria-label="Reproducir video"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 120 120"
-                  className="w-full h-full drop-shadow-2xl"
-                >
-                  <defs>
-                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" style={{stopColor:'#ff7f00', stopOpacity:1}} />
-                      <stop offset="100%" style={{stopColor:'#ff5500', stopOpacity:1}} />
-                    </linearGradient>
-                  </defs>
-
-                  <path
-                    d="M 50,10
-                       C 25,10 5,30 5,60
-                       C 5,90 25,110 50,110
-                       C 80,110 115,60 115,60
-                       C 115,60 80,10 50,10 Z
-
-                       M 48,40
-                       A 20,20 0 1,0 48,80
-                       A 20,20 0 1,0 48,40 Z"
-                    fill="url(#grad1)"
-                  />
-                </svg>
+                <Image
+                  src="/img/play.svg"
+                  alt="Reproducir"
+                  fill
+                  className="object-contain drop-shadow-2xl select-none pointer-events-none"
+                  priority
+                />
               </button>
 
               {/* Product Name & CTA */}
