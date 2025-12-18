@@ -3,6 +3,7 @@ import VideoBanner from "@/components/VideoBanner";
 import ImageTextSection from "@/components/ImageTextSection";
 import { ToolsShowcase } from "@/components/ToolsShowcase";
 import { Footer } from "@/components/Footer";
+import AutoplayVideoBanner from "@/components/AutoplayVideoBanner";
 
 export default function Home() {
   return (
@@ -20,12 +21,14 @@ export default function Home() {
         overlayOpacity={0.0}
         overlayColor="bg-black"
         height="screen"
-        showPlayButton={true}
-        autoPlay={false}
+        
+        autoPlay={true}
       >
         {/* Agrega algún contenido para probar */}
         {/* <h1 className="text-white text-4xl">Título del Banner</h1> */}
       </VideoBanner>
+
+      
 
       {/* Sección con imagen y texto */}
       <ImageTextSection

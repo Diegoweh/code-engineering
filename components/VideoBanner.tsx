@@ -1,9 +1,8 @@
 'use client';
 
-import { useEffect, useRef, useState, } from 'react';
+import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Image from 'next/image';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,7 +17,6 @@ interface VideoBannerProps {
   autoPlay?: boolean;
   loop?: boolean;
   muted?: boolean;
-  showPlayButton?: boolean;
 }
 
 export default function VideoBanner({
@@ -29,16 +27,14 @@ export default function VideoBanner({
   overlayColor = 'bg-black',
   children,
   height = 'screen',
-  autoPlay = false,
+  autoPlay = true,
   loop = true,
   muted = true,
-  showPlayButton = false,
 }: VideoBannerProps) {
   const sectionRef = useRef<HTMLElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
-  const [isPlaying, setIsPlaying] = useState(autoPlay);
 
   const heightClasses = {
     screen: 'min-h-screen',
@@ -46,14 +42,19 @@ export default function VideoBanner({
     full: 'h-screen',
   };
 
-  const handlePlay = (e?: React.MouseEvent | React.TouchEvent) => {
-    e?.preventDefault();
-    e?.stopPropagation();
-    setIsPlaying(true);
-    setTimeout(() => {
-      videoRef.current?.play();
-    }, 100);
-  };
+  // Forzar reproducción automática del video
+  useEffect(() => {
+    if (videoRef.current && autoPlay) {
+      const playVideo = async () => {
+        try {
+          await videoRef.current?.play();
+        } catch (error) {
+          console.log('Error al reproducir video:', error);
+        }
+      };
+      playVideo();
+    }
+  }, [videoSrc, autoPlay]);
 
   useEffect(() => {
     if (!sectionRef.current || !overlayRef.current) return;
@@ -147,7 +148,7 @@ export default function VideoBanner({
       <video
         ref={videoRef}
         className="absolute top-0 left-0 w-full h-full object-contain scale-110"
-        autoPlay={showPlayButton ? false : autoPlay}
+        autoPlay={autoPlay}
         loop={loop}
         muted={muted}
         playsInline
@@ -171,24 +172,6 @@ export default function VideoBanner({
       >
         {children}
       </div>
-
-      {/* Play Button - Solo se muestra si showPlayButton es true y no está reproduciendo */}
-      {showPlayButton && !isPlaying && (
-        <button
-          onClick={handlePlay}
-          onTouchEnd={handlePlay}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 sm:w-20 sm:h-20 md:w-28 md:h-28 flex items-center justify-center hover:scale-110 active:scale-95 transition-all touch-manipulation z-30"
-          aria-label="Reproducir video"
-        >
-          <Image
-            src="/img/play.svg"
-            alt="Reproducir"
-            fill
-            className="object-contain drop-shadow-2xl select-none pointer-events-none"
-            priority
-          />
-        </button>
-      )}
     </section>
   );
 }

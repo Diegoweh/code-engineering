@@ -44,7 +44,7 @@ export function Footer() {
         <LogoGlare width={500} height={200} />
       </div> */}
 
-      <SpotlightReveal spotlightSize={200} />
+      <SpotlightReveal spotlightSize={600} />
 
       {/* Blue Line Separator */}
       <div className="h-1 bg-gradient-to-r from-orange-600 via-amber-500 to-orange-600"></div>
