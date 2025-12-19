@@ -12,7 +12,7 @@ const tools = [
   },
   {
     id: "fluid-rd",
-    name: "FLUID - RD • FLUID +",
+    name: "FLUID - RD・FLUID +",
     videoUrl: "/video/fluid-rd-compressed.mp4",
     thumbnail: "/img/fluid-rd-fluid+.webp",
   },
@@ -34,7 +34,7 @@ export function ToolsShowcase() {
   }
 
   return (
-    <section className="py-4 px-4">
+    <section className="py-4 px-4 font-adelle">
       <div className="max-w-6xl mx-auto">
         {/* Title */}
         <h2 className="text-white text-center text-lg font-medium mb-6">Herramientas</h2>
