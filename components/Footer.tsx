@@ -7,7 +7,7 @@ export function Footer() {
   return (
     <footer>
       {/* CTA Section */}
-      <section className="py-16 px-4 text-center">
+      <section className="py-16 px-4 text-center font-adelle">
         {/* <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Start Investig Smarter Today</h2>
         <p className="text-gray-400 max-w-xl mx-auto mb-8">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet mollis ex, eget auctor nunc.
@@ -44,13 +44,13 @@ export function Footer() {
         <LogoGlare width={500} height={200} />
       </div> */}
 
-      <SpotlightReveal spotlightSize={600} />
+      <SpotlightReveal spotlightSize={650} />
 
       {/* Blue Line Separator */}
       <div className="h-1 bg-gradient-to-r from-orange-600 via-amber-500 to-orange-600"></div>
 
       {/* Footer Bar */}
-      <div className="bg-black/95 py-6 px-4">
+      <div className="bg-black/95 py-6 px-4 font-adelle">
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             {/* Logo - placeholder, user has their own */}

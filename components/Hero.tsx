@@ -89,7 +89,7 @@ export default function Hero() {
         {/* Subtítulo */}
         <motion.p
           variants={itemVariants}
-          className="text-orange-400 text-xs sm:text-sm md:text-base font-semibold uppercase tracking-wider mb-3 sm:mb-4"
+          className="text-orange-400 text-xs sm:text-sm md:text-base font-semibold uppercase tracking-wider mb-3 sm:mb-4 font-adelle"
         >
           Nosotros
         </motion.p>
@@ -97,7 +97,7 @@ export default function Hero() {
         {/* Título */}
         <motion.h1
           variants={itemVariants}
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight px-2"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight px-2 font-adelle"
         >
           Nuestra filosofía es clara, somos ingenieros que hacemos ingeniería
           {/* <span className="text-orange-400">con Código</span> */}
@@ -106,7 +106,7 @@ export default function Hero() {
         {/* Párrafo */}
         <motion.p
           variants={itemVariants}
-          className="text-gray-300 text-start md:text-center text-base sm:text-lg md:text-xl max-w-xs   sm:max-w-lg md:max-w-2xl lg:max-w-4xl leading-relaxed px-4 sm:px-6 md:px-0"
+          className="text-gray-300 text-start md:text-center text-base sm:text-lg md:text-xl max-w-xs   sm:max-w-lg md:max-w-2xl lg:max-w-4xl leading-relaxed px-4 sm:px-6 md:px-0 font-adelle"
         >
           Nos enfocamos en corregir las fallas más comunes en las herramientas actuales, mejorándolos en tres aspectos fundamentales, los hacemos más confiables, más eficientes y más versátiles, generando nuevas herramientas respaldadas por nuestra propia patentes
         </motion.p>

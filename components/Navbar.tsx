@@ -57,7 +57,7 @@ export default function Navbar() {
           </div>
 
           {/* Links de navegación - Centro */}
-          <div className="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
+          <div className="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2 font-adelle">
             <Link
               href="#inicio"
               className="text-white hover:text-orange-400 transition-colors font-medium"
@@ -85,7 +85,7 @@ export default function Navbar() {
           </div>
 
           {/* Botón de contacto e idiomas - Derecha */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-4 font-adelle">
             <button
               onClick={toggleLanguage}
               className="text-white hover:text-orange-400 transition-colors font-medium px-3 py-2 rounded-lg hover:bg-white/10"
@@ -144,7 +144,7 @@ export default function Navbar() {
             mobileMenuOpen ? 'max-h-96 opacity-100 mt-4' : 'max-h-0 opacity-0'
           }`}
         >
-          <div className="flex flex-col space-y-3 py-4 border-t border-white/20">
+          <div className="flex flex-col space-y-3 py-4 border-t border-white/20 font-adelle">
             <Link
               href="#inicio"
               onClick={closeMobileMenu}

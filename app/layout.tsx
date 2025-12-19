@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import BackgroundLightRays from "@/components/BackgroundLightRays";
 import Navbar from "@/components/Navbar";
@@ -12,6 +13,16 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const adelleSans = localFont({
+  src: [{
+    path: "../public/fonts/adelle-sans-regular.otf",
+    weight: "400",
+    style: "normal",
+  }],
+  display: "swap",
+  variable: "--font-adelle-sans",
 });
 
 export const metadata: Metadata = {
@@ -27,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${adelleSans.variable} antialiased`}
       >
         <BackgroundLightRays />
         <Navbar />

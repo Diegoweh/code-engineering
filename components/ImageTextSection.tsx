@@ -90,7 +90,7 @@ export default function ImageTextSection({
       {/* Contenido de texto */}
       <motion.div
         variants={textVariants}
-        className="w-full lg:w-1/2 flex flex-col justify-center space-y-6 px-6 lg:px-12 text-center md:text-start"
+        className="w-full lg:w-1/2 flex flex-col justify-center space-y-6 px-6 lg:px-12 text-center md:text-start font-adelle"
       >
         <h2 className={`text-4xl md:text-5xl lg:text-6xl font-bold ${titleColor}`}>
           {title}

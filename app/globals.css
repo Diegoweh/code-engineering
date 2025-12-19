@@ -1,4 +1,12 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@layer theme {
+  :root {
+    --font-adelle: var(--font-adelle-sans);
+  }
+}
 
+.font-adelle {
+  font-family: var(--font-adelle-sans);
+}

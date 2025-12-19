@@ -47,7 +47,7 @@ export function ToolsShowcase() {
                 key={tool.id}
                 onClick={() => handleTabChange(tool.id)}
                 onTouchEnd={() => handleTabChange(tool.id)}
-                className={`px-3 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 whitespace-nowrap touch-manipulation ${
+                className={`px-3 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 whitespace-nowrap touch-manipulation font-adelle ${
                   activeToolId === tool.id ? "bg-white text-zinc-900" : "text-zinc-400 hover:text-white active:text-white"
                 }`}
               >
