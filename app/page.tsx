@@ -2,8 +2,7 @@ import Hero from "@/components/Hero";
 import VideoBanner from "@/components/VideoBanner";
 import ImageTextSection from "@/components/ImageTextSection";
 import { ToolsShowcase } from "@/components/ToolsShowcase";
-import { Footer } from "@/components/Footer";
-import AutoplayVideoBanner from "@/components/AutoplayVideoBanner";
+
 
 export default function Home() {
   return (
@@ -47,8 +46,7 @@ export default function Home() {
 
       {/* Contenido después del banner */}
       <div style={{ height: '10vh' }}></div>
-
-      <Footer />
+      
 
       
     </main>

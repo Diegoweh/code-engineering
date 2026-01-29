@@ -34,7 +34,7 @@ export function ToolsShowcase() {
   }
 
   return (
-    <section className="py-4 px-4 font-adelle">
+    <section id="tools-showcase" className="py-4 px-4 font-adelle">
       <div className="max-w-6xl mx-auto">
         {/* Title */}
         <h2 className="text-white text-center text-lg font-medium mb-6">Herramientas</h2>

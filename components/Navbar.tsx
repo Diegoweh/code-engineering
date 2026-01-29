@@ -34,7 +34,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-black-900/95 backdrop-blur-md shadow-lg'
+          ? 'bg-black-900/95 backdrop-blur-md shadow-xl'
           : 'bg-transparent backdrop-blur-sm'
       }`}
     >
@@ -65,7 +65,7 @@ export default function Navbar() {
               Nosotros
             </Link>
             <Link
-              href="#servicios"
+              href="#tools-showcase"
               className="text-white hover:text-orange-400 transition-colors font-medium"
             >
               Herramientas
@@ -153,7 +153,7 @@ export default function Navbar() {
               Nosotros
             </Link>
             <Link
-              href="#servicios"
+              href="#tools-showcase"
               onClick={closeMobileMenu}
               className="text-white hover:text-orange-400 transition-colors px-4 py-2 hover:bg-white/10 rounded-lg"
             >

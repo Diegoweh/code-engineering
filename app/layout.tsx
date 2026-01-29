@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import BackgroundLightRays from "@/components/BackgroundLightRays";
 import Navbar from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,6 +44,7 @@ export default function RootLayout({
         <BackgroundLightRays />
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
