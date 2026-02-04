@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
 const tools = [
@@ -75,13 +76,13 @@ export function ToolsShowcase() {
           {/* Product Name & CTA */}
           <div className="absolute bottom-4 sm:bottom-8 left-0 right-0 text-center pointer-events-none">
             <h3 className="text-white text-2xl sm:text-3xl font-light tracking-wider mb-3 sm:mb-4 px-4">{activeTool.name}</h3>
-            <button
+            <Link
+              href={`/${activeTool.id}`}
               className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white text-sm px-4 py-2 rounded-full border border-white/20 hover:bg-white/20 transition-colors pointer-events-auto"
-              onClick={(e) => e.stopPropagation()}
             >
               Ver más
               <ArrowRight className="w-4 h-4" />
-            </button>
+            </Link>
           </div>
         </div>
       </div>
