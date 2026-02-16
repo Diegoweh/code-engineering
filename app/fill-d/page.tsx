@@ -33,7 +33,7 @@ export default function Page() {
       transition: { duration: 1, ease: [0.42, 0, 0.58, 1] as const },
     },
   }
-
+ 
   return (
     <main className="min-h-screen">
       {/* Hero / Video header */}
@@ -50,7 +50,7 @@ export default function Page() {
           playsInline
           aria-label="Video de fondo"
         >
-          <source src="/video/fill-d/fill-d-1-compressed.mp4" type="video/mp4" />
+          <source src="/video/fill-d/fill-d-shortcut.compressed.mp4" type="video/mp4" />
           <track kind="captions" />
           Tu navegador no soporta el tag de video.
         </video>
@@ -58,16 +58,16 @@ export default function Page() {
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
           <h2 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center px-4 font-adelle">
-            Fill-D
-            <span className="block text-orange-400 mt-2">
-              Soluciones Reales
+            FILL-D
+            <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mt-2">
+              Dispositivo de llenado de tubería que se activa remotamente mediante un pulso de presión desde una superficie.
             </span>
           </h2>
         </div>
       </header>
 
 
-      <section
+      {/* <section
         className="min-h-dvh flex items-center justify-center relative px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16"
         aria-labelledby="about-title"
       >
@@ -94,16 +94,28 @@ export default function Page() {
             Dispositivo de llenado de tubería que se activa remotamente mediante un pulso de presión desde una superficie.
           </motion.p>
         </motion.div>
-      </section>
+      </section> */}
 
       {/* Sección con imagen y texto */}
         <ImageTextSection
             id="about"
             imageSrc="/img/fill-d/fill-d.webp"
             imageAlt="Nuestra empresa"
-            title="Activado por discos de ruptura de alta precisión"
-            description="Cuando el diseño del pozo requiere bajar la tubería de producción cerrada, esta debe llenarse con el fluido de terminación. Las opciones convencionales—llenado manual desde superficie, camisas de circulación con cierre posterior mediante coiled tubing o slickline, o zapatas flotadoras—implican retrasos, costos adicionales o riesgo de falla."
+            title="En Pozos en los cuales su diseño precisa"
+            description="La tubería de producción tiene que bajarse cerrada. La misma debe ser llenada con el fluido de terminación existente en el pozo. La manera mas sencilla de hacerlo es desde superficie, simplemente llenándola manualmente, con el consiguiente retraso y riesgos ambientales y humanos por cosntaminación. Otras alternativas es usar una manga o camisa de circulación la cual puede ser cerrada posteriormente con Coiled tubing o silickline con la consecuencia en costos y riesgos operacionales que esto conlleva. Otro mecanismo usado son las zapatas flotadoras, pero su uso depende del tipo de pozo y algunas veces son susceptibles de falla."
             imagePosition="left"
+            backgroundColor="bg-transparent"
+            titleColor="text-white"
+            descriptionColor="text-gray-300"
+        />
+
+        <ImageTextSection
+            id="about"
+            imageSrc="/img/fill-d/fill-d-4.webp"
+            imageAlt="Nuestra empresa"
+            title="FILL-D, de CODE® Engineering"
+            description="Es un dispositivo de llenado de tubería que puede ser activado de forma remota mediante un pulso de presión desde superficie. La herramienta como tal, forma parte de la sarta de terminación colocándose por encima del empacador, su sistema de ventanas, poseen un área de flujo mayor que el área de flujo de la sarta, y permanecen abiertas durante la bajada de la sarta permitiendo la entrada de fluido desde el anular hasta la tubería."
+            imagePosition="right"
             backgroundColor="bg-transparent"
             titleColor="text-white"
             descriptionColor="text-gray-300"
@@ -124,10 +136,10 @@ export default function Page() {
 
         <ImageTextSection
             id="about"
-            imageSrc="/img/fill-d/fill-d-2.webp"
+            imageSrc="/img/fill-d/fill-d-5.webp"
             imageAlt="Nuestra empresa"
-            title="Puntos de corte calibrados"
-            description="Una vez en profundidad, las ventanas se cierran mediante un pulso de presión desde superficie. FILL-D cuenta con un doble sistema de cierre independiente: un disco de ruptura externo y pines calibrados de corte interno. Activar cualquiera de los dos sistemas es suficiente para sellar la tubería."
+            title="Una vez en el fondo, las ventanas pueden ser cerradas"
+            description="FILL-D, posee un doble sistema de cierre independiente, uno externo por disco de ruptura y otro interno por pines calibrados, de manera que con solo actuar uno de lo sistemas es suficiente para que la herramienta cumpla con el propósito de volver hermética la tubería."
             imagePosition="right"
             backgroundColor="bg-transparent"
             titleColor="text-white"
@@ -136,10 +148,10 @@ export default function Page() {
 
         <ImageTextSection
             id="about"
-            imageSrc="/img/fill-d/fill-d-3.webp"
+            imageSrc="/img/fill-d/fill-d-6.webp"
             imageAlt="Nuestra empresa"
-            title="Presión hidrostática o presión del pulso"
-            description="La herramienta incluye un perfil para operadora mecánica estándar, permitiendo accionamiento mecánico si es requerido. Una vez cerrada, FILL-D queda trabada en posición durante la vida útil de la sarta de producción."
+            title="Posee además"
+            description="Un perfil para alojar una operadora mecánica y accionarla en caso de ser necesario. Una vez que la herramienta se cierra, permanecerá trabada en posición cerrada durante la vida útil de la sarta de producción."
             imagePosition="left"
             backgroundColor="bg-transparent"
             titleColor="text-white"

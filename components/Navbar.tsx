@@ -43,7 +43,7 @@ export default function Navbar() {
           {/* Logo - Izquierda */}
           <div className="flex-shrink-0">
             <Link href="/" className="block">
-              <div className=" rounded-lg py-1 backdrop-blur-sm hover:bg-white/20 transition-colors">
+              <div className="">
                 <Image
                   src="/logoNav.png"
                   alt="Logo de la empresa"

@@ -108,7 +108,7 @@ export default function Hero() {
           variants={itemVariants}
           className="text-gray-300 text-start md:text-center text-base sm:text-lg md:text-xl max-w-xs   sm:max-w-lg md:max-w-2xl lg:max-w-4xl leading-relaxed px-4 sm:px-6 md:px-0 font-adelle"
         >
-          Nos enfocamos en corregir las fallas más comunes en las herramientas actuales, mejorándolos en tres aspectos fundamentales, los hacemos más confiables, más eficientes y más versátiles, generando nuevas herramientas respaldadas por nuestra propia patentes
+          Una ingeniería en desarrollo continuo para crear diseños útiles, confiables y más eficientes para la industria de petróleo y gas, solo eso nos llevará a tener las herramientas preferidas del mercado.
         </motion.p>
 
         {/* CTA opcional */}
