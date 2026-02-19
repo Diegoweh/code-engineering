@@ -7,7 +7,13 @@ import Image from 'next/image';
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileToolsOpen, setMobileToolsOpen] = useState(false);
   const [language, setLanguage] = useState('ES');
+  const toolLinks = [
+    { href: '/fill-d', label: 'FILL-D' },
+    { href: '/fluid-rd', label: 'FLUID-RD' },
+    { href: '/serie-fade', label: 'SERIE FADE' },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +30,7 @@ export default function Navbar() {
 
   const closeMobileMenu = () => {
     setMobileMenuOpen(false);
+    setMobileToolsOpen(false);
   };
 
   const toggleLanguage = () => {
@@ -64,12 +71,33 @@ export default function Navbar() {
             >
               Nosotros
             </Link>
-            <Link
-              href="#tools-showcase"
-              className="text-white hover:text-orange-400 transition-colors font-medium"
-            >
-              Herramientas
-            </Link>
+            <div className="relative group">
+              <button
+                type="button"
+                className="text-white hover:text-orange-400 transition-colors font-medium inline-flex items-center gap-1"
+              >
+                Herramientas
+                <svg
+                  className="w-4 h-4 mt-[1px]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div className="absolute left-1/2 -translate-x-1/2 top-full mt-3 w-52 rounded-xl border border-white/20 bg-black/95 backdrop-blur-md shadow-xl p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-200">
+                {toolLinks.map((tool) => (
+                  <Link
+                    key={tool.href}
+                    href={tool.href}
+                    className="block text-white hover:text-orange-400 transition-colors px-3 py-2 rounded-lg hover:bg-white/10"
+                  >
+                    {tool.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
             <Link
               href="#proyectos"
               className="text-white hover:text-orange-400 transition-colors font-medium"
@@ -152,13 +180,41 @@ export default function Navbar() {
             >
               Nosotros
             </Link>
-            <Link
-              href="#tools-showcase"
-              onClick={closeMobileMenu}
-              className="text-white hover:text-orange-400 transition-colors px-4 py-2 hover:bg-white/10 rounded-lg"
-            >
-              Herramientas
-            </Link>
+            <div className="px-2">
+              <button
+                type="button"
+                onClick={() => setMobileToolsOpen(!mobileToolsOpen)}
+                className="w-full text-white hover:text-orange-400 transition-colors px-2 py-2 hover:bg-white/10 rounded-lg inline-flex items-center justify-between"
+              >
+                <span>Herramientas</span>
+                <svg
+                  className={`w-4 h-4 transition-transform ${mobileToolsOpen ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div
+                className={`overflow-hidden transition-all duration-300 ${
+                  mobileToolsOpen ? 'max-h-64 opacity-100 mt-2' : 'max-h-0 opacity-0'
+                }`}
+              >
+                <div className="space-y-1 pl-3 pr-1">
+                  {toolLinks.map((tool) => (
+                    <Link
+                      key={tool.href}
+                      href={tool.href}
+                      onClick={closeMobileMenu}
+                      className="block text-white/90 hover:text-orange-400 transition-colors px-3 py-2 hover:bg-white/10 rounded-lg"
+                    >
+                      {tool.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
             <Link
               href="#proyectos"
               onClick={closeMobileMenu}
