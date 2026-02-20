@@ -4,6 +4,7 @@ import { motion, Variants } from 'framer-motion'
 import ImageTextSection from '@/components/ImageTextSection'
 import VideoBanner from '@/components/VideoBanner'
 import { ToolsShowcase } from '@/components/ToolsShowcase'
+import CarouselTextSection from '@/components/CarouselTextSection'
 
 export default function Page() {
   const containerVariants: Variants = {
@@ -95,7 +96,7 @@ export default function Page() {
       </section> */}
 
       {/* Sección con imagen y texto */}
-        <ImageTextSection
+        {/* <ImageTextSection
             id="about"
             imageSrc="/img/serie-fade/serie-fade.webp"
             imageAlt="Nuestra empresa"
@@ -105,7 +106,21 @@ export default function Page() {
             backgroundColor="bg-transparent"
             titleColor="text-white"
             descriptionColor="text-gray-300"
-        />
+        /> */}
+
+        <CarouselTextSection
+            images={[
+              { src: '/img/serie-fade/serie-fade-2.webp', alt: 'Description 1' },
+              { src: '/img/serie-fade/serie-fade-1.webp', alt: 'Description 0' },
+              { src: '/img/serie-fade/serie-fade-3.webp', alt: 'Description 2' },
+              { src: '/img/serie-fade/serie-fade-4.webp', alt: 'Description 3' },
+            ]}
+            title="TORPEDO"
+            description="Un diseño simple e inteligente que permite “ROMPER” las cúpulas cerámicas o barreras de cristal sin intervención de coiled tubing y sin explosivos ni baterías"
+            imagePosition="left"
+            autoPlay
+            autoPlayInterval={3000}
+          /> 
 
         <ImageTextSection
             id="about"

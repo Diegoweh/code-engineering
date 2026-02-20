@@ -6,6 +6,7 @@ import { motion, Variants } from 'framer-motion'
 import ImageTextSection from '@/components/ImageTextSection'
 import VideoBanner from '@/components/VideoBanner'
 import { ToolsShowcase } from '@/components/ToolsShowcase'
+import CarouselTextSection from '@/components/CarouselTextSection'
 
 export default function Page() {
   const containerVariants: Variants = {
@@ -97,7 +98,7 @@ export default function Page() {
       </section> */}
 
       {/* Sección con imagen y texto */}
-        <ImageTextSection
+        {/* <ImageTextSection
             id="about"
             imageSrc="/img/fluid-rd/fluid-rd-1.webp"
             imageAlt="Nuestra empresa"
@@ -107,7 +108,21 @@ export default function Page() {
             backgroundColor="bg-transparent"
             titleColor="text-white"
             descriptionColor="text-gray-300"
-        />
+        /> */}
+
+        <CarouselTextSection
+            images={[
+              { src: '/img/fluid-rd/fluid-rd-1.webp', alt: 'Description 1' },
+              { src: '/img/fluid-rd/fluid-rd-5.webp', alt: 'Description 0' },
+              { src: '/img/fluid-rd/fluid-rd-6.webp', alt: 'Description 2' },
+              { src: '/img/fluid-rd/fluid-rd-7.webp', alt: 'Description 3' },
+            ]}
+            title="Tras finalizar la terminación del pozo y antes de expulsar el POP o romper el domo cerámico"
+            description="Suele reemplazarse el fluido de terminación por uno más liviano para reducir la presión hidrostática, facilitar el flujo a superficie y evitar dañar el reservorio por sobrepresión. Este cambio se realiza comúnmente mediante una camisa de circulación abierta con slickline o coiled tubing, desplazando el fluido por el anular. Sin embargo, este procedimiento implica riesgos operativos y costos adicionales innecesarios"
+            imagePosition="left"
+            autoPlay
+            autoPlayInterval={3000}
+          />
 
         <ImageTextSection
             id="about"

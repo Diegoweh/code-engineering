@@ -6,6 +6,7 @@ import { motion, Variants } from 'framer-motion'
 import ImageTextSection from '@/components/ImageTextSection'
 import VideoBanner from '@/components/VideoBanner'
 import { ToolsShowcase } from '@/components/ToolsShowcase'
+import CarouselTextSection from '@/components/CarouselTextSection'
 
 export default function Page() {
   const containerVariants: Variants = {
@@ -97,7 +98,7 @@ export default function Page() {
       </section> */}
 
       {/* Sección con imagen y texto */}
-        <ImageTextSection
+        {/* <ImageTextSection
             id="about"
             imageSrc="/img/fill-d/fill-d.webp"
             imageAlt="Nuestra empresa"
@@ -107,6 +108,20 @@ export default function Page() {
             backgroundColor="bg-transparent"
             titleColor="text-white"
             descriptionColor="text-gray-300"
+        /> */}
+
+        <CarouselTextSection
+          images={[
+            { src: '/img/fill-d/fill-d-1.webp', alt: 'Description 1' },
+            { src: '/img/fill-d/fill-d.webp', alt: 'Description 0' },
+            { src: '/img/fill-d/fill-d-2.webp', alt: 'Description 2' },
+            { src: '/img/fill-d/fill-d-3.webp', alt: 'Description 3' },
+          ]}
+          title="En Pozos en los cuales su diseño precisa"
+          description="La tubería de producción tiene que bajarse cerrada. La misma debe ser llenada con el fluido de terminación existente en el pozo. La manera mas sencilla de hacerlo es desde superficie, simplemente llenándola manualmente, con el consiguiente retraso y riesgos ambientales y humanos por cosntaminación. Otras alternativas es usar una manga o camisa de circulación la cual puede ser cerrada posteriormente con Coiled tubing o silickline con la consecuencia en costos y riesgos operacionales que esto conlleva. Otro mecanismo usado son las zapatas flotadoras, pero su uso depende del tipo de pozo y algunas veces son susceptibles de falla."
+          imagePosition="left"
+          autoPlay
+          autoPlayInterval={3000}
         />
 
         <ImageTextSection

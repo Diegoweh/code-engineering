@@ -99,10 +99,10 @@ export default function Navbar() {
               </div>
             </div>
             <Link
-              href="#proyectos"
+              href="/faq"
               className="text-white hover:text-orange-400 transition-colors font-medium"
             >
-              FAQ
+              FAQs
             </Link>
             {/* <Link
               href="#nosotros"
@@ -216,7 +216,7 @@ export default function Navbar() {
               </div>
             </div>
             <Link
-              href="#proyectos"
+              href="/faq"
               onClick={closeMobileMenu}
               className="text-white hover:text-orange-400 transition-colors px-4 py-2 hover:bg-white/10 rounded-lg"
             >
