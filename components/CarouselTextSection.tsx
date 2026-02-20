@@ -187,10 +187,10 @@ export default function CarouselTextSection({
         variants={textVariants}
         className="w-full lg:w-1/2 flex flex-col justify-center space-y-6 px-6 lg:px-12 text-center md:text-start font-adelle"
       >
-        <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold ${titleColor}`}>
+        <h2 className={`text-3xl md:text-4xl text-center lg:text-5xl font-bold ${titleColor}`}>
           {title}
         </h2>
-        <p className={`text-lg md:text-xl leading-relaxed ${descriptionColor}`}>
+        <p className={`text-lg md:text-xl text-center leading-relaxed ${descriptionColor}`}>
           {description}
         </p>
       </motion.div>

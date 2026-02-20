@@ -118,7 +118,7 @@ export default function Page() {
               { src: '/img/fluid-rd/fluid-rd-7.webp', alt: 'Description 3' },
             ]}
             title="Tras finalizar la terminación del pozo y antes de expulsar el POP o romper el domo cerámico"
-            description="Suele reemplazarse el fluido de terminación por uno más liviano para reducir la presión hidrostática, facilitar el flujo a superficie y evitar dañar el reservorio por sobrepresión. Este cambio se realiza comúnmente mediante una camisa de circulación abierta con slickline o coiled tubing, desplazando el fluido por el anular. Sin embargo, este procedimiento implica riesgos operativos y costos adicionales innecesarios"
+            description="suele reemplazarse el fluido de terminación por uno más liviano para reducir la presión hidrostática, facilitar el flujo a superficie y evitar dañar el reservorio por sobrepresión. Este cambio se realiza comúnmente mediante una camisa de circulación abierta con slickline o coiled tubing, desplazando el fluido por el anular. Sin embargo, este procedimiento implica riesgos operativos y costos adicionales innecesarios"
             imagePosition="left"
             autoPlay
             autoPlayInterval={3000}
@@ -129,7 +129,7 @@ export default function Page() {
             imageSrc="/img/fluid-rd/fluid-rd-2.webp"
             imageAlt="Nuestra empresa"
             title="FLUID-RD y FLUID+ de CODE® Engineering"
-            description="Resuelven este problema. Estas herramientas están diseñadas para realizar este procedimiento de manera que se minimice la intervención de slickline o coiled tubing"
+            description="resuelven este problema. Estas herramientas están diseñadas para realizar este procedimiento de manera que se minimice la intervención de slickline o coiled tubing"
             imagePosition="right"
             backgroundColor="bg-transparent"
             titleColor="text-white"
@@ -154,7 +154,7 @@ export default function Page() {
             imageSrc="/img/fluid-rd/fluid-rd-3.webp"
             imageAlt="Nuestra empresa"
             title="Esta herramienta en cualquiera de sus dos versiones"
-            description="Forma parte de la terminación superior, bajándose en posición cerrada por encima de la espiga de sellos, luego de que las operaciones de asentamiento y prueba de tubería han terminado, mediante un pulso de presión anular la herramienta es abierta por presión diferencial anular-tubería, esto crea una comunicación que es mayor que el área de flujo de la sarta de terminación, de esta forma se desplaza el fluido desde el anular hasta la tubería"
+            description="forma parte de la terminación superior, bajándose en posición cerrada por encima de la espiga de sellos, luego de que las operaciones de asentamiento y prueba de tubería han terminado, mediante un pulso de presión anular la herramienta es abierta por presión diferencial anular-tubería, esto crea una comunicación que es mayor que el área de flujo de la sarta de terminación, de esta forma se desplaza el fluido desde el anular hasta la tubería"
             imagePosition="right"
             backgroundColor="bg-transparent"
             titleColor="text-white"
@@ -166,7 +166,7 @@ export default function Page() {
             imageSrc="/img/fluid-rd/fluid-rd-4.webp"
             imageAlt="Nuestra empresa"
             title="Una vez desplazado el fluido"
-            description="Las herramientas FLUID-RD y FLUID+ pueden cerrarse con operadoras convencionales y permanecer en el pozo funcionando como camisa de circulación, permitiendo múltiples aperturas y cierres mecánicos. Además, FLUID+ incorpora una cámara de compensación que actúa como “booster” en pozos con fluidos de terminación muy pesados. Ambas herramientas son aptas para pozos horizontales o altamente desviados"
+            description="las herramientas FLUID-RD y FLUID+ pueden cerrarse con operadoras convencionales y permanecer en el pozo funcionando como camisa de circulación, permitiendo múltiples aperturas y cierres mecánicos. Además, FLUID+ incorpora una cámara de compensación que actúa como “booster” en pozos con fluidos de terminación muy pesados. Ambas herramientas son aptas para pozos horizontales o altamente desviados"
             imagePosition="left"
             backgroundColor="bg-transparent"
             titleColor="text-white"

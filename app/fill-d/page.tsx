@@ -118,7 +118,7 @@ export default function Page() {
             { src: '/img/fill-d/fill-d-3.webp', alt: 'Description 3' },
           ]}
           title="En Pozos en los cuales su diseño precisa"
-          description="La tubería de producción tiene que bajarse cerrada. La misma debe ser llenada con el fluido de terminación existente en el pozo. La manera mas sencilla de hacerlo es desde superficie, simplemente llenándola manualmente, con el consiguiente retraso y riesgos ambientales y humanos por cosntaminación. Otras alternativas es usar una manga o camisa de circulación la cual puede ser cerrada posteriormente con Coiled tubing o silickline con la consecuencia en costos y riesgos operacionales que esto conlleva. Otro mecanismo usado son las zapatas flotadoras, pero su uso depende del tipo de pozo y algunas veces son susceptibles de falla."
+          description="la tubería de producción tiene que bajarse cerrada. La misma debe ser llenada con el fluido de terminación existente en el pozo. La manera mas sencilla de hacerlo es desde superficie, simplemente llenándola manualmente, con el consiguiente retraso y riesgos ambientales y humanos por cosntaminación. Otras alternativas es usar una manga o camisa de circulación la cual puede ser cerrada posteriormente con Coiled tubing o silickline con la consecuencia en costos y riesgos operacionales que esto conlleva. Otro mecanismo usado son las zapatas flotadoras, pero su uso depende del tipo de pozo y algunas veces son susceptibles de falla."
           imagePosition="left"
           autoPlay
           autoPlayInterval={3000}
@@ -129,7 +129,7 @@ export default function Page() {
             imageSrc="/img/fill-d/fill-d-4.webp"
             imageAlt="Nuestra empresa"
             title="FILL-D, de CODE® Engineering"
-            description="Es un dispositivo de llenado de tubería que puede ser activado de forma remota mediante un pulso de presión desde superficie. La herramienta como tal, forma parte de la sarta de terminación colocándose por encima del empacador, su sistema de ventanas, poseen un área de flujo mayor que el área de flujo de la sarta, y permanecen abiertas durante la bajada de la sarta permitiendo la entrada de fluido desde el anular hasta la tubería."
+            description="es un dispositivo de llenado de tubería que puede ser activado de forma remota mediante un pulso de presión desde superficie. La herramienta como tal, forma parte de la sarta de terminación colocándose por encima del empacador, su sistema de ventanas, poseen un área de flujo mayor que el área de flujo de la sarta, y permanecen abiertas durante la bajada de la sarta permitiendo la entrada de fluido desde el anular hasta la tubería."
             imagePosition="right"
             backgroundColor="bg-transparent"
             titleColor="text-white"
@@ -166,7 +166,7 @@ export default function Page() {
             imageSrc="/img/fill-d/fill-d-6.webp"
             imageAlt="Nuestra empresa"
             title="Posee además"
-            description="Un perfil para alojar una operadora mecánica y accionarla en caso de ser necesario. Una vez que la herramienta se cierra, permanecerá trabada en posición cerrada durante la vida útil de la sarta de producción."
+            description="un perfil para alojar una operadora mecánica y accionarla en caso de ser necesario. Una vez que la herramienta se cierra, permanecerá trabada en posición cerrada durante la vida útil de la sarta de producción."
             imagePosition="left"
             backgroundColor="bg-transparent"
             titleColor="text-white"
