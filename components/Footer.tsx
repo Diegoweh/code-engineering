@@ -13,9 +13,9 @@ export function Footer() {
         <p className="text-gray-400 max-w-xl mx-auto mb-8">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet mollis ex, eget auctor nunc.
         </p> */}
-        <button className="border border-gray-500 text-gray-300 px-8 py-2 rounded-full hover:bg-gray-800 transition-colors">
+        {/* <button className="border border-gray-500 text-gray-300 px-8 py-2 rounded-full hover:bg-gray-800 transition-colors">
           Contacto
-        </button>
+        </button> */}
 
         {/* Decorative Text */}
         <div className="mt-16 space-y-2 text-center">
@@ -61,10 +61,10 @@ export function Footer() {
 
             {/* Navigation */}
             <nav className="flex items-center gap-6 text-sm text-gray-700">
-              <Link href="#nosotros" className="hover:text-orange-500 transition-colors">
+              <Link href="/#nosotros" className="hover:text-orange-500 transition-colors">
                 Nosotros
               </Link>
-              <Link href="#herramientas" className="hover:text-orange-500 transition-colors">
+              <Link href="#tools-showcase" className="hover:text-orange-500 transition-colors">
                 Herramientas
               </Link>
               <Link href="#faq" className="hover:text-orange-500 transition-colors">

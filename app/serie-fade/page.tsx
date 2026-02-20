@@ -5,6 +5,7 @@ import ImageTextSection from '@/components/ImageTextSection'
 import VideoBanner from '@/components/VideoBanner'
 import { ToolsShowcase } from '@/components/ToolsShowcase'
 import CarouselTextSection from '@/components/CarouselTextSection'
+import VideoTextSection from '@/components/VideoTextSection'
 
 export default function Page() {
   const containerVariants: Variants = {
@@ -122,7 +123,7 @@ export default function Page() {
             autoPlayInterval={3000}
           /> 
 
-        <ImageTextSection
+        {/* <ImageTextSection
             id="about"
             imageSrc="/img/serie-fade/serie-fade-1.webp"
             imageAlt="Nuestra empresa"
@@ -132,6 +133,13 @@ export default function Page() {
             backgroundColor="bg-transparent"
             titleColor="text-white"
             descriptionColor="text-gray-300"
+        /> */}
+
+        <VideoTextSection
+          videoSrc="/video/serie-fade/serie-fade-2-compressed.mp4"
+          title="TORPEDO"
+          description="Se lanza dentro de la tubería y al llegar al fondo, dispara un proyectil que impacta la cúpula cerámica. La fuerza para este disparo está basada en diferenciales de presión, por lo cual no usa electrónica ni explosivos"
+          videoPosition="right"
         />
 
         <VideoBanner

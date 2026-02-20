@@ -16,7 +16,7 @@ export default function Home() {
 
       <VideoBanner
         id="innovation"
-        videoSrc="/video/banner-compressed.mp4"
+        videoSrc="/video/fill-d/fill-d-2.mp4"
         overlayOpacity={0.0}
         overlayColor="bg-black"
         height="screen"
@@ -35,7 +35,7 @@ export default function Home() {
         imageSrc="/img/code.webp"
         imageAlt="Nuestra empresa"
         title="Simplificamos al  máximo los conceptos."
-        description="Con sistemas redundantes de accionamiento, lo cual permite que en el caso de que un sistema de accionamiento no opere, se puede activar el segundo sistema para garantizar una herramienta que realmente funcione ante cualquier ciscunstancia."
+        description="Confiables: Con sistemas redundantes de accionamiento, lo cual permite que en el caso de que un sistema de accionamiento no opere, se puede activar el segundo sistema para garantizar una herramienta que realmente funcione ante cualquier circunstancia. Eficientes: Simplificamos al máximo los conceptos, de manera que además de evitar el incremento en costos también minimizamos los riesgos de falla, nuestras herramientas tienen un solo propósito, hacer el trabajo de manera exacta minimizando el riesgo de las fallas más comunes. Versátiles: Con un amplio margen de presiones y temperaturas, algunas de ellas con conceptos modulares, los cuales pueden ser integrados para tener mayores prestaciones."
         imagePosition="left"
         backgroundColor="bg-transparent"
         titleColor="text-white"
