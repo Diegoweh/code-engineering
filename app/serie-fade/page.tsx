@@ -59,15 +59,15 @@ export default function Page() {
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
           <h2 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center px-4 font-adelle">
             SERIE FADE
-            <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mt-2">
+            {/* <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mt-2">
               Un diseño simple e inteligente que permite “ROMPER” 
-            </span>
+            </span> */}
           </h2>
         </div>
       </header>
 
 
-      {/* <section
+      <section
         className="min-h-dvh flex items-center justify-center relative px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16"
         aria-labelledby="about-title"
       >
@@ -94,7 +94,7 @@ export default function Page() {
             Dispositivo de llenado de tubería que se activa remotamente mediante un pulso de presión desde una superficie.
           </motion.p>
         </motion.div>
-      </section> */}
+      </section>
 
       {/* Sección con imagen y texto */}
         {/* <ImageTextSection
@@ -179,7 +179,7 @@ export default function Page() {
             descriptionColor="text-gray-300"
         /> */}
 
-        <ToolsShowcase />
+        <ToolsShowcase excludeId="serie-fade" />
             
     </main>
   )

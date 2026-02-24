@@ -25,10 +25,16 @@ const tools = [
   },
 ]
 
-export function ToolsShowcase() {
-  const [activeToolId, setActiveToolId] = useState(tools[0].id)
+interface ToolsShowcaseProps {
+  excludeId?: string;
+}
 
-  const activeTool = tools.find((tool) => tool.id === activeToolId) || tools[0]
+export function ToolsShowcase({ excludeId }: ToolsShowcaseProps = {}) {
+  const visibleTools = excludeId ? tools.filter((t) => t.id !== excludeId) : tools
+
+  const [activeToolId, setActiveToolId] = useState(visibleTools[0].id)
+
+  const activeTool = visibleTools.find((tool) => tool.id === activeToolId) || visibleTools[0]
 
   const handleTabChange = (id: string) => {
     setActiveToolId(id)
@@ -43,7 +49,7 @@ export function ToolsShowcase() {
         {/* Tabs */}
         <div className="flex justify-center mb-6 sm:mb-8 overflow-x-auto px-2">
           <div className="bg-zinc-800/60 rounded-full p-1 sm:p-1.5 flex gap-1 min-w-max">
-            {tools.map((tool) => (
+            {visibleTools.map((tool) => (
               <button
                 key={tool.id}
                 onClick={() => handleTabChange(tool.id)}

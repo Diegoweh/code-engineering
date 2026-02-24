@@ -173,7 +173,7 @@ export default function Page() {
             descriptionColor="text-gray-300"
         />
 
-        <ToolsShowcase />
+        <ToolsShowcase excludeId="fill-d" />
             
     </main>
   )

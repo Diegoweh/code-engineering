@@ -66,7 +66,7 @@ export default function Navbar() {
           {/* Links de navegación - Centro */}
           <div className="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2 font-adelle">
             <Link
-              href="#inicio"
+              href="/#inicio"
               className="text-white hover:text-orange-400 transition-colors font-medium"
             >
               Nosotros
