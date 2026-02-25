@@ -7,6 +7,7 @@ import ImageTextSection from '@/components/ImageTextSection'
 import VideoBanner from '@/components/VideoBanner'
 import { ToolsShowcase } from '@/components/ToolsShowcase'
 import CarouselTextSection from '@/components/CarouselTextSection'
+import VideoTextSection from '@/components/VideoTextSection'
 
 export default function Page() {
   const containerVariants: Variants = {
@@ -149,7 +150,7 @@ export default function Page() {
           {/* <h1 className="text-white text-4xl">Título del Banner</h1> */}
         </VideoBanner>
 
-        <ImageTextSection
+        {/* <ImageTextSection
             id="about"
             imageSrc="/img/fluid-rd/fluid-rd-3.webp"
             imageAlt="Nuestra empresa"
@@ -159,6 +160,13 @@ export default function Page() {
             backgroundColor="bg-transparent"
             titleColor="text-white"
             descriptionColor="text-gray-300"
+        /> */}
+
+        <VideoTextSection
+          videoSrc="/video/fluid-rd/fluid-rd-section.mp4"
+          title="Esta herramienta en cualquiera de sus dos versiones"
+          description="forma parte de la terminación superior, bajándose en posición cerrada por encima de la espiga de sellos, luego de que las operaciones de asentamiento y prueba de tubería han terminado, mediante un pulso de presión anular la herramienta es abierta por presión diferencial anular-tubería, esto crea una comunicación que es mayor que el área de flujo de la sarta de terminación, de esta forma se desplaza el fluido desde el anular hasta la tubería"
+          videoPosition="left"
         />
 
         <ImageTextSection
@@ -167,7 +175,7 @@ export default function Page() {
             imageAlt="Nuestra empresa"
             title="Una vez desplazado el fluido"
             description="las herramientas FLUID-RD y FLUID+ pueden cerrarse con operadoras convencionales y permanecer en el pozo funcionando como camisa de circulación, permitiendo múltiples aperturas y cierres mecánicos. Además, FLUID+ incorpora una cámara de compensación que actúa como “booster” en pozos con fluidos de terminación muy pesados. Ambas herramientas son aptas para pozos horizontales o altamente desviados"
-            imagePosition="left"
+            imagePosition="right"
             backgroundColor="bg-transparent"
             titleColor="text-white"
             descriptionColor="text-gray-300"

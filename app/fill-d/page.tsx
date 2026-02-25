@@ -7,6 +7,7 @@ import ImageTextSection from '@/components/ImageTextSection'
 import VideoBanner from '@/components/VideoBanner'
 import { ToolsShowcase } from '@/components/ToolsShowcase'
 import CarouselTextSection from '@/components/CarouselTextSection'
+import VideoTextSection from '@/components/VideoTextSection'
 
 export default function Page() {
   const containerVariants: Variants = {
@@ -149,17 +150,24 @@ export default function Page() {
           {/* <h1 className="text-white text-4xl">Título del Banner</h1> */}
         </VideoBanner>
 
-        <ImageTextSection
+        {/* <ImageTextSection
             id="about"
             imageSrc="/img/fill-d/fill-d-5.webp"
             imageAlt="Nuestra empresa"
             title="Una vez en el fondo, las ventanas pueden ser cerradas"
-            description="FILL-D, posee un doble sistema de cierre independiente, uno externo por disco de ruptura y otro interno por pines calibrados, de manera que con solo actuar uno de lo sistemas es suficiente para que la herramienta cumpla con el propósito de volver hermética la tubería."
+            description="FILL-D, posee un doble sistema de cierre independiente, uno externo por disco de ruptura y otro interno por pines calibrados, de manera que con solo actuar uno de lo sistemas es suficiente para que la herramienta cumpla con el propósito de volver hermética la tubería"
             imagePosition="right"
             backgroundColor="bg-transparent"
             titleColor="text-white"
             descriptionColor="text-gray-300"
-        />
+        /> */}
+
+        <VideoTextSection
+          videoSrc="/video/fill-d/fill-d-section.mp4"
+          title="Una vez en el fondo, las ventanas pueden ser cerradas"
+          description="FILL-D, posee un doble sistema de cierre independiente, uno externo por disco de ruptura y otro interno por pines calibrados, de manera que con solo actuar uno de lo sistemas es suficiente para que la herramienta cumpla con el propósito de volver hermética la tubería."
+          videoPosition="left"
+        />        
 
         <ImageTextSection
             id="about"
@@ -167,7 +175,7 @@ export default function Page() {
             imageAlt="Nuestra empresa"
             title="Posee además"
             description="un perfil para alojar una operadora mecánica y accionarla en caso de ser necesario. Una vez que la herramienta se cierra, permanecerá trabada en posición cerrada durante la vida útil de la sarta de producción."
-            imagePosition="left"
+            imagePosition="right"
             backgroundColor="bg-transparent"
             titleColor="text-white"
             descriptionColor="text-gray-300"

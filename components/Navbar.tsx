@@ -56,7 +56,7 @@ export default function Navbar() {
                   alt="Logo de la empresa"
                   width={90}
                   height={40}
-                  className="h-auto w-auto"
+                  className="h-auto w-auto hover:scale-105 transition-transform"
                   priority
                 />
               </div>
