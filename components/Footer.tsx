@@ -60,14 +60,32 @@ export function Footer() {
             </div> */}
 
             {/* Navigation */}
-            <nav className="flex items-center gap-6 text-sm text-gray-700">
+            <nav className="flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2 text-sm text-gray-700">
               <Link href="/#nosotros" className="hover:text-orange-500 transition-colors">
                 Nosotros
               </Link>
-              <Link href="#tools-showcase" className="hover:text-orange-500 transition-colors">
-                Herramientas
+              <Link href="/fill-d" className="hover:text-orange-500 transition-colors">
+                FILL-D
               </Link>
-              <Link href="#faq" className="hover:text-orange-500 transition-colors">
+              <Link href="/fluid-rd" className="hover:text-orange-500 transition-colors">
+                FLUID-RD
+              </Link>
+              <Link href="/serie-fade" className="hover:text-orange-500 transition-colors">
+                TORPEDO
+              </Link>
+              <Link href="/serie-fade/dot-one-plus" className="hover:text-orange-500 transition-colors">
+                DOT-ONE PLUS
+              </Link>
+              <Link href="/serie-fade/fade-one" className="hover:text-orange-500 transition-colors">
+                FADE-ONE
+              </Link>
+              <Link href="/serie-fade/fade-two" className="hover:text-orange-500 transition-colors">
+                FADE-TWO
+              </Link>
+              <Link href="/serie-fade/fade-zero" className="hover:text-orange-500 transition-colors">
+                FADE-ZERO
+              </Link>
+              <Link href="/faq" className="hover:text-orange-500 transition-colors">
                 FAQ
               </Link>
               <Link href="#contacto" className="hover:text-orange-500 transition-colors">

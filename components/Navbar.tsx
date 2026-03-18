@@ -10,9 +10,19 @@ export default function Navbar() {
   const [mobileToolsOpen, setMobileToolsOpen] = useState(false);
   const [language, setLanguage] = useState('ES');
   const toolLinks = [
-    { href: '/fill-d', label: 'FILL-D' },
-    { href: '/fluid-rd', label: 'FLUID-RD' },
-    { href: '/serie-fade', label: 'SERIE FADE' },
+    { href: '/fill-d', label: 'FILL-D', children: [] },
+    { href: '/fluid-rd', label: 'FLUID-RD', children: [] },
+    {
+      href: '/serie-fade',
+      label: 'SERIE FADE',
+      children: [
+        { href: '/serie-fade', label: 'TORPEDO' },
+        { href: '/serie-fade/dot-one-plus', label: 'DOT-ONE PLUS' },
+        { href: '/serie-fade/fade-one', label: 'FADE-ONE' },
+        { href: '/serie-fade/fade-two', label: 'FADE-TWO' },
+        { href: '/serie-fade/fade-zero', label: 'FADE-ZERO' },
+      ],
+    },
   ];
 
   useEffect(() => {
@@ -87,15 +97,37 @@ export default function Navbar() {
                 </svg>
               </button>
               <div className="absolute left-1/2 -translate-x-1/2 top-full mt-3 w-52 rounded-xl border border-white/20 bg-black/95 backdrop-blur-md shadow-xl p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-200">
-                {toolLinks.map((tool) => (
-                  <Link
-                    key={tool.href}
-                    href={tool.href}
-                    className="block text-white hover:text-orange-400 transition-colors px-3 py-2 rounded-lg hover:bg-white/10"
-                  >
-                    {tool.label}
-                  </Link>
-                ))}
+                {toolLinks.map((tool) =>
+                  tool.children.length > 0 ? (
+                    <div key={tool.href} className="relative group/sub">
+                      <div className="flex items-center justify-between text-white hover:text-orange-400 transition-colors px-3 py-2 rounded-lg hover:bg-white/10 cursor-default">
+                        <span>{tool.label}</span>
+                        <svg className="w-3 h-3 -rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </div>
+                      <div className="absolute left-full top-0 ml-1 w-44 rounded-xl border border-white/20 bg-black/95 backdrop-blur-md shadow-xl p-2 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all duration-200">
+                        {tool.children.map((child) => (
+                          <Link
+                            key={child.href}
+                            href={child.href}
+                            className="block text-white hover:text-orange-400 transition-colors px-3 py-2 rounded-lg hover:bg-white/10 text-sm"
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    <Link
+                      key={tool.href}
+                      href={tool.href}
+                      className="block text-white hover:text-orange-400 transition-colors px-3 py-2 rounded-lg hover:bg-white/10"
+                    >
+                      {tool.label}
+                    </Link>
+                  )
+                )}
               </div>
             </div>
             <Link
@@ -198,20 +230,36 @@ export default function Navbar() {
               </button>
               <div
                 className={`overflow-hidden transition-all duration-300 ${
-                  mobileToolsOpen ? 'max-h-64 opacity-100 mt-2' : 'max-h-0 opacity-0'
+                  mobileToolsOpen ? 'max-h-96 opacity-100 mt-2' : 'max-h-0 opacity-0'
                 }`}
               >
                 <div className="space-y-1 pl-3 pr-1">
-                  {toolLinks.map((tool) => (
-                    <Link
-                      key={tool.href}
-                      href={tool.href}
-                      onClick={closeMobileMenu}
-                      className="block text-white/90 hover:text-orange-400 transition-colors px-3 py-2 hover:bg-white/10 rounded-lg"
-                    >
-                      {tool.label}
-                    </Link>
-                  ))}
+                  {toolLinks.map((tool) =>
+                    tool.children.length > 0 ? (
+                      <div key={tool.href}>
+                        <p className="text-white/50 text-xs uppercase tracking-widest px-3 pt-2 pb-1">{tool.label}</p>
+                        {tool.children.map((child) => (
+                          <Link
+                            key={child.href}
+                            href={child.href}
+                            onClick={closeMobileMenu}
+                            className="block text-white/80 hover:text-orange-400 transition-colors px-5 py-1.5 hover:bg-white/10 rounded-lg text-sm"
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
+                    ) : (
+                      <Link
+                        key={tool.href}
+                        href={tool.href}
+                        onClick={closeMobileMenu}
+                        className="block text-white/90 hover:text-orange-400 transition-colors px-3 py-2 hover:bg-white/10 rounded-lg"
+                      >
+                        {tool.label}
+                      </Link>
+                    )
+                  )}
                 </div>
               </div>
             </div>

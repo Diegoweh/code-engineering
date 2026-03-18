@@ -119,7 +119,7 @@ export default function CarouselTextSection({
         variants={imageVariants}
         className="w-full lg:w-1/2 flex items-center justify-center"
       >
-        <div className="relative w-full max-w-lg aspect-square overflow-hidden rounded-2xl shadow-2xl">
+        <div className="relative w-full max-w-lg aspect-video overflow-hidden rounded-2xl shadow-2xl">
           <AnimatePresence initial={false} custom={direction} mode="popLayout">
             <motion.div
               key={current}

@@ -1,11 +1,19 @@
 "use client"
 
 import { motion, Variants } from 'framer-motion'
+import Link from 'next/link'
 import ImageTextSection from '@/components/ImageTextSection'
 import VideoBanner from '@/components/VideoBanner'
 import { ToolsShowcase } from '@/components/ToolsShowcase'
 import CarouselTextSection from '@/components/CarouselTextSection'
 import VideoTextSection from '@/components/VideoTextSection'
+
+const serieFadeTools = [
+  { href: '/serie-fade/dot-one-plus', label: 'DOT-ONE PLUS' },
+  { href: '/serie-fade/fade-one', label: 'FADE-ONE' },
+  { href: '/serie-fade/fade-two', label: 'FADE-TWO' },
+  { href: '/serie-fade/fade-zero', label: 'FADE-ZERO' },
+]
 
 export default function Page() {
   const containerVariants: Variants = {
@@ -58,7 +66,7 @@ export default function Page() {
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
           <h2 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center px-4 font-adelle">
-            SERIE FADE
+            TORPEDO
             {/* <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mt-2">
               Un diseño simple e inteligente que permite “ROMPER” 
             </span> */}
@@ -178,6 +186,24 @@ export default function Page() {
             titleColor="text-white"
             descriptionColor="text-gray-300"
         /> */}
+
+        {/* Serie Fade sub-tools grid */}
+        <section className="py-16 px-4 font-adelle">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-white text-center text-lg font-medium mb-8">Más herramientas de la Serie Fade</h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {serieFadeTools.map((tool) => (
+                <Link
+                  key={tool.href}
+                  href={tool.href}
+                  className="flex items-center justify-center rounded-xl border border-white/20 bg-zinc-800/60 px-4 py-6 text-white text-sm font-medium tracking-wider hover:bg-zinc-700/60 hover:border-orange-400/40 hover:text-orange-400 transition-all duration-200 text-center"
+                >
+                  {tool.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
 
         <ToolsShowcase excludeId="serie-fade" />
             
