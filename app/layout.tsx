@@ -26,9 +26,40 @@ const adelleSans = localFont({
   variable: "--font-adelle-sans",
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://code-engineering.com";
+
 export const metadata: Metadata = {
-  title: "Code Engineering",
-  description: "Herramientas y recursos para desarrolladores y entusiastas de la producción de petroleo y gas.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "CODE® Engineering",
+    template: "%s | CODE® Engineering",
+  },
+  description:
+    "CODE® Engineering diseña y fabrica herramientas de completación de pozos de petróleo y gas: FILL-D, FLUID-RD y Serie Fade (TORPEDO, FADE-ONE, FADE-TWO, FADE-ZERO, DOT-ONE PLUS).",
+  keywords: [
+    "completación de pozos",
+    "herramientas de completación",
+    "petróleo y gas",
+    "FILL-D",
+    "FLUID-RD",
+    "Serie Fade",
+    "TORPEDO",
+    "FADE-ONE",
+    "FADE-TWO",
+    "FADE-ZERO",
+    "DOT-ONE PLUS",
+    "cúpulas cerámicas",
+    "CODE Engineering",
+  ],
+  openGraph: {
+    type: "website",
+    siteName: "CODE® Engineering",
+    locale: "es_ES",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -37,7 +68,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${adelleSans.variable} antialiased`}
       >

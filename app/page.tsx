@@ -1,7 +1,20 @@
+import type { Metadata } from "next";
 import Hero from "@/components/Hero";
 import VideoBanner from "@/components/VideoBanner";
 import ImageTextSection from "@/components/ImageTextSection";
 import { ToolsShowcase } from "@/components/ToolsShowcase";
+
+export const metadata: Metadata = {
+  title: "Herramientas de Completación de Pozos",
+  description:
+    "CODE® Engineering desarrolla herramientas de completación para pozos de petróleo y gas: FILL-D, FLUID-RD y Serie Fade (TORPEDO, FADE-ONE, FADE-TWO, FADE-ZERO, DOT-ONE PLUS).",
+  openGraph: {
+    title: "CODE® Engineering | Herramientas de Completación de Pozos",
+    description:
+      "Herramientas innovadoras de completación para pozos de petróleo y gas. Diseño sin Coiled Tubing, sin explosivos, activación remota por presión diferencial.",
+    url: "/",
+  },
+};
 
 
 export default function Home() {
