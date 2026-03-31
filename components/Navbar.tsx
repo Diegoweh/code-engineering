@@ -76,7 +76,7 @@ export default function Navbar() {
           {/* Links de navegación - Centro */}
           <div className="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2 font-adelle">
             <Link
-              href="/#inicio"
+              href="/nosotros"
               className="text-white hover:text-orange-400 transition-colors font-medium"
             >
               Nosotros
@@ -154,7 +154,7 @@ export default function Navbar() {
             </button>
             <Link
               href="#contacto"
-              className="bg-gray-500 hover:bg-gray-600 text-white font-semibold px-6 py-2 rounded-lg transition-colors shadow-lg hover:shadow-gray-500/50"
+              className="bg-orange-500 hover:bg-gray-600 text-white font-semibold px-6 py-2 rounded-lg transition-colors shadow-lg "
             >
               Contacto
             </Link>
@@ -206,7 +206,7 @@ export default function Navbar() {
         >
           <div className="flex flex-col space-y-3 py-4 border-t border-white/20 font-adelle">
             <Link
-              href="#inicio"
+              href="/nosotros"
               onClick={closeMobileMenu}
               className="text-white hover:text-orange-400 transition-colors px-4 py-2 hover:bg-white/10 rounded-lg"
             >

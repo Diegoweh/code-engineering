@@ -52,10 +52,10 @@ export default function Page() {
           Tu navegador no soporta el tag de video.
         </video> 
 
-        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-          <h2 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center px-4 font-adelle">
+        <div className="absolute inset-0 bg-black/0 flex items-center justify-center">
+          {/* <h2 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center px-4 font-adelle">
             FADE-ONE
-          </h2>
+          </h2> */}
         </div>
       </header>
 
@@ -74,7 +74,7 @@ export default function Page() {
             variants={itemVariants}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight px-2 font-adelle"
           >
-            FADE-ONE de CODE® Engineering
+            FADE-ONE
           </motion.h2>
 
           {/* <motion.p
@@ -93,8 +93,8 @@ export default function Page() {
           
           { src: '/img/serie-fade/fade-one/fade-one-4.webp', alt: 'FADE-ONE 4' },
         ]}
-        title=""
-        description="FADE ONE de CODE ENGINEERING®, está pensado para que, de la manera más sencilla, se elimine la posibilidad de ese evento indeseado. Su concepto es simple, dos cúpulas cerámicas enfrentadas por sus caras cóncavas, las cuales por su geometría pueden resistir las más altas presiones y ambientes agresivos. Entre las cúpulas se forma una cámara atmosférica protegida por sistema s de sellos redundantes."
+        title="FADE ONE de CODE ENGINEERING®, está pensado para que, de la manera más sencilla, se elimine la posibilidad de ese evento indeseado"
+        description="Su concepto es simple, dos cúpulas cerámicas enfrentadas por sus caras cóncavas, las cuales por su geometría pueden resistir las más altas presiones y ambientes agresivos. Entre las cúpulas se forma una cámara atmosférica protegida por sistema s de sellos redundantes."
         imagePosition="left"
         autoPlay
         autoPlayInterval={3000}
@@ -125,8 +125,8 @@ export default function Page() {
         id="about"
         imageSrc="/img/serie-fade/fade-one/fade-one.webp"
         imageAlt="Nuestra empresa"
-        title=""
-        description="Cuando las operaciones de terminación finalizan, la cúpula superior se rompe mecánicamente, esto se logra mediante la herramienta de CODE conocida como TORPEDO, este se lanza desde superficie y rompe la primera cúpula, la columna hidrostática al entrar en la cámara atmosférica rompe la segunda cúpula. "
+        title="Cuando las operaciones de terminación finalizan, la cúpula superior se rompe mecánicamente"
+        description="Esto se logra mediante la herramienta de CODE conocida como TORPEDO, este se lanza desde superficie y rompe la primera cúpula, la columna hidrostática al entrar en la cámara atmosférica rompe la segunda cúpula."
         imagePosition="right"
         backgroundColor="bg-transparent"
         titleColor="text-white"
@@ -138,8 +138,8 @@ export default function Page() {
         id="about"
         imageSrc="/img/serie-fade/fade-one/fade-one-3.webp"
         imageAlt="Nuestra empresa"
-        title=""
-        description="Sin embargo, FADE ONE puede transformarse en una herramienta aún más versátil, adicionando en su parte superior “DOT ONE”, esto le otorga a la herramienta un mecanismo de activación remoto por presión diferencial (Tubería-Yacimiento), y si además se le adiciona “PLUS+” se obtiene un sistema completo protegido contra activación accidental por picos de presión durante las operaciones de terminación."
+        title="FADE ONE puede transformarse en una herramienta aún más versátil, adicionando en su parte superior “DOT ONE”"
+        description="Esto le otorga a la herramienta un mecanismo de activación remoto por presión diferencial (Tubería-Yacimiento), y si además se le adiciona “PLUS+” se obtiene un sistema completo protegido contra activación accidental por picos de presión durante las operaciones de terminación."
         imagePosition="left"
         backgroundColor="bg-transparent"
         titleColor="text-white"
@@ -151,8 +151,8 @@ export default function Page() {
         id="about"
         imageSrc="/img/serie-fade/fade-one/fade-one-4.webp"
         imageAlt="Nuestra empresa"
-        title=""
-        description="FADE ONE: Activado de manera mecánica con TORPEDO o con tubería flexible. FADE ONE.1: Activada por presión Diferencial Tubería-Yacimiento. FADE ONE.1+: Activada por presión Diferencial Tubería-Yacimiento. Con mecanismo de protección contra activación previa."
+        title="FADE ONE Activa de manera mecánica con TORPEDO o con tubería flexible"
+        description="FADE ONE.1: Activada por presión Diferencial Tubería-Yacimiento. FADE ONE.1+: Activada por presión Diferencial Tubería-Yacimiento. Con mecanismo de protección contra activación previa."
         imagePosition="right"
         backgroundColor="bg-transparent"
         titleColor="text-white"

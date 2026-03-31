@@ -64,13 +64,13 @@ export default function Page() {
         </video>
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-          <h2 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center px-4 font-adelle">
+        <div className="absolute inset-0 bg-black/0 flex items-center justify-center">
+          {/* <h2 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center px-4 font-adelle">
             TORPEDO
-            {/* <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mt-2">
+            <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mt-2">
               Un diseño simple e inteligente que permite “ROMPER” 
-            </span> */}
-          </h2>
+            </span>
+          </h2> */}
         </div>
       </header>
 
@@ -92,15 +92,15 @@ export default function Page() {
             variants={itemVariants}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight px-2 font-adelle"
           >
-            SERIE FADE de CODE® Engineering
+            SERIE FADE
           </motion.h2>
 
-          <motion.p
+          {/* <motion.p
             variants={itemVariants}
             className="text-gray-300 text-start md:text-center text-base sm:text-lg md:text-xl max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-4xl leading-relaxed px-4 sm:px-6 md:px-0 font-adelle"
           >
             Dispositivo de llenado de tubería que se activa remotamente mediante un pulso de presión desde una superficie.
-          </motion.p>
+          </motion.p> */}
         </motion.div>
       </section>
 
@@ -124,8 +124,8 @@ export default function Page() {
               { src: '/img/serie-fade/serie-fade-3.webp', alt: 'Description 2' },
               { src: '/img/serie-fade/serie-fade-4.webp', alt: 'Description 3' },
             ]}
-            title="TORPEDO"
-            description="Un diseño simple e inteligente que permite “ROMPER” las cúpulas cerámicas o barreras de cristal sin intervención de coiled tubing y sin explosivos ni baterías"
+            title="Un diseño simple e inteligente que permite"
+            description="“ROMPER” las cúpulas cerámicas o barreras de cristal sin intervención de coiled tubing y sin explosivos ni baterías."
             imagePosition="left"
             autoPlay
             autoPlayInterval={3000}
@@ -145,8 +145,8 @@ export default function Page() {
 
         <VideoTextSection
           videoSrc="/video/serie-fade/serie-fade-2-compressed.mp4"
-          title="TORPEDO"
-          description="Se lanza dentro de la tubería y al llegar al fondo, dispara un proyectil que impacta la cúpula cerámica. La fuerza para este disparo está basada en diferenciales de presión, por lo cual no usa electrónica ni explosivos"
+          title="Se lanza dentro de la tubería y al llegar al fondo"
+          description="Dispara un proyectil que impacta la cúpula cerámica. La fuerza para este disparo está basada en diferenciales de presión, por lo cual no usa electrónica ni explosivos"
           videoPosition="right"
         />
 

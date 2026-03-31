@@ -1,6 +1,4 @@
 import Link from "next/link"
-import Image from "next/image"
-import LogoGlare from "./LogoGlare"
 import { SpotlightReveal } from "./SpotlightReveal"
 import { FaYoutube } from "react-icons/fa";
 
@@ -61,7 +59,7 @@ export function Footer() {
 
             {/* Navigation */}
             <nav className="flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2 text-sm text-gray-700">
-              <Link href="/#nosotros" className="hover:text-orange-500 transition-colors">
+              <Link href="/nosotros" className="hover:text-orange-500 transition-colors">
                 Nosotros
               </Link>
               <Link href="/fill-d" className="hover:text-orange-500 transition-colors">

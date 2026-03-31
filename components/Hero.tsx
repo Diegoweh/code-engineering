@@ -1,12 +1,10 @@
 'use client';
 
 import Image from 'next/image';
-import { useState } from 'react';
+import Link from 'next/link';
 import { motion, Variants } from 'framer-motion';
 
 export default function Hero() {
-  const [showMore, setShowMore] = useState(false);
-
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -25,18 +23,6 @@ export default function Hero() {
       y: 0,
       transition: {
         duration: 0.8,
-        ease: [0.42, 0, 0.58, 1] as const,
-      },
-    },
-  };
-
-  const logoVariants: Variants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        duration: 1,
         ease: [0.42, 0, 0.58, 1] as const,
       },
     },
@@ -106,41 +92,16 @@ export default function Hero() {
           {/* <span className="text-orange-400">con Código</span> */}
         </motion.h1>
 
-        {/* Párrafo */}
-        <motion.p
-          variants={itemVariants}
-          className="text-gray-300 text-start md:text-center text-base sm:text-lg md:text-xl max-w-xs   sm:max-w-lg md:max-w-2xl lg:max-w-4xl leading-relaxed px-4 sm:px-6 md:px-0 font-adelle"
-        >
-          Una ingeniería en desarrollo continuo para crear diseños útiles, confiables y más eficientes para la industria de petróleo y gas, solo eso nos llevará a tener las herramientas preferidas del mercado.
-        </motion.p>
-
         <motion.div
           variants={itemVariants}
-          className="mt-4 sm:mt-5 w-full max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-4xl px-4 sm:px-6 md:px-0"
+          className="mt-4 sm:mt-5"
         >
-          <div
-            className={`grid transition-all duration-300 ${
-              showMore ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
-            }`}
+          <Link
+            href="/nosotros"
+            className="inline-flex items-center rounded-lg border border-orange-400/40 bg-orange-500/10 px-5 py-2.5 text-orange-400 hover:text-orange-300 hover:border-orange-300/50 hover:bg-orange-500/15 transition-colors font-semibold text-sm sm:text-base font-adelle"
           >
-            <div className="overflow-hidden">
-              <p className="text-gray-300 text-start md:text-center text-base sm:text-lg md:text-xl leading-relaxed font-adelle">
-                De nada sirve repetir las mismas herramientas sin mejorar prestaciones, repitiendo una y otra vez el mismo tipo de falla, aquí es donde innovamos, nuestro método de diseño es muy sencillo, nos enfocamos en corregir las fallas más comunes en las herramientas actuales, mejorándolos en tres aspectos fundamentales, los hacemos más confiables, más eficientes y más versátiles, generando nuevas herramientas respaldadas por nuestras propias patentes.    
-
-                “…Somos lo que somos, una empresa de ingeniería con ingenieros haciendo ingeniería…”
-
-              </p>
-            </div>
-          </div>
-
-          <button
-            type="button"
-            onClick={() => setShowMore((prev) => !prev)}
-            className="mt-3 text-orange-400 hover:text-orange-300 transition-colors font-semibold text-sm sm:text-base font-adelle"
-            aria-expanded={showMore}
-          >
-            {showMore ? 'Ver menos' : 'Ver más'}
-          </button>
+            Ver más
+          </Link>
         </motion.div>
 
         {/* CTA opcional */}

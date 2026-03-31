@@ -42,6 +42,7 @@ export default function CarouselTextSection({
   const isInView = useInView(ref, { once: true, amount: 0.3 });
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(1);
+  const [isDescriptionVisible, setIsDescriptionVisible] = useState(false);
 
   const goTo = useCallback(
     (index: number, dir: number) => {
@@ -187,12 +188,25 @@ export default function CarouselTextSection({
         variants={textVariants}
         className="w-full lg:w-1/2 flex flex-col justify-center space-y-6 px-6 lg:px-12 text-center md:text-start font-adelle"
       >
-        <h2 className={`text-3xl md:text-4xl text-center lg:text-5xl font-bold ${titleColor}`}>
+        <h2 className={`text-lg md:text-xl text-justify lg:text-2xl font-bold ${titleColor}`}>
           {title}
         </h2>
-        <p className={`text-lg md:text-xl text-center leading-relaxed ${descriptionColor}`}>
-          {description}
-        </p>
+        <div className="flex flex-col items-center gap-3">
+          <button
+            type="button"
+            onClick={() => setIsDescriptionVisible((prev) => !prev)}
+            className="text-sm md:text-base font-semibold text-orange-500 underline underline-offset-4 transition-opacity hover:opacity-80"
+            aria-expanded={isDescriptionVisible}
+          >
+            {isDescriptionVisible ? 'Ver menos' : 'Ver más'}
+          </button>
+
+          {isDescriptionVisible && (
+            <p className={`text-md md:text-lg text-justify leading-relaxed ${descriptionColor}`}>
+              {description}
+            </p>
+          )}
+        </div>
       </motion.div>
     </>
   );

@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { motion, Variants, useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 interface ImageTextSectionProps {
   id?: string;
@@ -33,6 +33,7 @@ export default function ImageTextSection({
 }: ImageTextSectionProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
+  const [isDescriptionVisible, setIsDescriptionVisible] = useState(false);
 
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -92,12 +93,25 @@ export default function ImageTextSection({
         variants={textVariants}
         className="w-full lg:w-1/2 flex flex-col justify-center space-y-6 px-6 lg:px-12 text-center md:text-start font-adelle"
       >
-        <h2 className={`text-3xl md:text-4xl lg:text-5xl text-center font-bold ${titleColor}`}>
+        <h2 className={`text-xl md:text-2xl lg:text-3xl text-justify font-bold ${titleColor}`}>
           {title}
         </h2>
-        <p className={`text-lg md:text-xl leading-relaxed text-center ${descriptionColor}`}>
-          {description}
-        </p>
+        <div className="flex flex-col items-center gap-3">
+          <button
+            type="button"
+            onClick={() => setIsDescriptionVisible((prev) => !prev)}
+            className="text-sm md:text-base font-semibold text-orange-500 underline underline-offset-4 transition-opacity hover:opacity-80"
+            aria-expanded={isDescriptionVisible}
+          >
+            {isDescriptionVisible ? 'Ver menos' : 'Ver más'}
+          </button>
+
+          {isDescriptionVisible && (
+            <p className={`text-md md:text-lg text-justify leading-relaxed text-center ${descriptionColor}`}>
+              {description}
+            </p>
+          )}
+        </div>
       </motion.div>
     </>
   );

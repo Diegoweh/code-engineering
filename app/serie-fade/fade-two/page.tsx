@@ -52,10 +52,10 @@ export default function Page() {
           Tu navegador no soporta el tag de video.
         </video>
 
-        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-          <h2 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center px-4 font-adelle">
+        <div className="absolute inset-0 bg-black/0 flex items-center justify-center">
+          {/* <h2 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center px-4 font-adelle">
             FADE-TWO
-          </h2>
+          </h2> */}
         </div>
       </header>
 
@@ -74,7 +74,7 @@ export default function Page() {
             variants={itemVariants}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight px-2 font-adelle"
           >
-            FADE-TWO de CODE® Engineering
+            FADE-TWO
           </motion.h2>
 
           <motion.p
@@ -92,8 +92,8 @@ export default function Page() {
           { src: '/img/serie-fade/fade-two/fade-two-2.webp', alt: 'FADE-TWO 2' },
           { src: '/img/serie-fade/fade-two/fade-two-4.webp', alt: 'FADE-TWO 4' },         
         ]}
-        title=""
-        description="FADE TWO esta accionada por presión absoluta ejercida contra la cámara atmosférica contenida entre los dos domos cerámicos. La programación de activación se logra mediante pines calibrados, los cuales pueden ser modificados fácilmente en el campo. Al igual que las otras herramientas de la serie FADE, posee un sistema interno de cuchillas concéntricas que permiten la eliminación de restos de cerámicas luego de las cúpulas son activadas."
+        title="FADE TWO esta accionada por presión absoluta ejercida contra la cámara atmosférica contenida entre los dos domos cerámicos"
+        description="La programación de activación se logra mediante pines calibrados, los cuales pueden ser modificados fácilmente en el campo. Al igual que las otras herramientas de la serie FADE, posee un sistema interno de cuchillas concéntricas que permiten la eliminación de restos de cerámicas luego de las cúpulas son activadas."
         imagePosition="left"
         autoPlay
         autoPlayInterval={3000}
@@ -124,8 +124,8 @@ export default function Page() {
         id="about"
         imageSrc="/img/serie-fade/fade-two/fade-two-7.webp"
         imageAlt="Nuestra empresa"
-        title=""
-        description="Adicionando DOT ONE a esta herramienta, el sistema de activación por presión absoluta pasa a ser una sistema secundario e independiente de activación, por lo que pasa a tener sistemas redundantes que permiten la activación tanto por presión diferencial (Tubería-Reservorio) como presión absoluta contra la cámara atmosférica, esto garantiza la infalibilidad de la herramienta."
+        title="Adicionando DOT ONE a esta herramienta"
+        description="El sistema de activación por presión absoluta pasa a ser una sistema secundario e independiente de activación, por lo que pasa a tener sistemas redundantes que permiten la activación tanto por presión diferencial (Tubería-Reservorio) como presión absoluta contra la cámara atmosférica, esto garantiza la infalibilidad de la herramienta."
         imagePosition="right"
         backgroundColor="bg-transparent"
         titleColor="text-white"
@@ -137,8 +137,8 @@ export default function Page() {
         id="about"
         imageSrc="/img/serie-fade/fade-two/fade-two-6.webp"
         imageAlt="Nuestra empresa"
-        title=""
-        description="Todas las herramientas FADE, incluyendo esta, siempre ofrecen una opción de respaldo con el uso de “TORPEDO” el cual puede ser usado para accionar de manera remota la herramienta."
+        title="Todas las herramientas FADE incluyendo esta"
+        description="Siempre ofrecen una opción de respaldo con el uso de “TORPEDO” el cual puede ser usado para accionar de manera remota la herramienta."
         imagePosition="left"
         backgroundColor="bg-transparent"
         titleColor="text-white"
@@ -150,8 +150,8 @@ export default function Page() {
         id="about"
         imageSrc="/img/serie-fade/fade-two/fade-two-5.webp"
         imageAlt="Nuestra empresa"
-        title=""
-        description="FADE TWO: Activada por presión absoluta. FADE TWO.1: Activada por presión Diferencial Tubería-Yacimiento con mecanismo independiente de activación por presión absoluta. FADE TWO.1+: Activada por presión Diferencial Tubería-Yacimiento con mecanismo independiente de activación por presión absoluta. Con mecanismo de protección contra activación previa."
+        title="FADE TWO: Activada por presión absoluta"
+        description="FADE TWO.1: Activada por presión Diferencial Tubería-Yacimiento con mecanismo independiente de activación por presión absoluta. FADE TWO.1+: Activada por presión Diferencial Tubería-Yacimiento con mecanismo independiente de activación por presión absoluta. Con mecanismo de protección contra activación previa."
         imagePosition="right"
         backgroundColor="bg-transparent"
         titleColor="text-white"

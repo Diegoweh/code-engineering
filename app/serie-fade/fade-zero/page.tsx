@@ -52,10 +52,10 @@ export default function Page() {
           Tu navegador no soporta el tag de video.
         </video>
 
-        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-          <h2 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center px-4 font-adelle">
+        <div className="absolute inset-0 bg-black/0 flex items-center justify-center">
+          {/* <h2 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center px-4 font-adelle">
             FADE-ZERO
-          </h2>
+          </h2> */}
         </div>
       </header>
 
@@ -74,7 +74,7 @@ export default function Page() {
             variants={itemVariants}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight px-2 font-adelle"
           >
-            FADE-ZERO de CODE® Engineering
+            FADE-ZERO
           </motion.h2>
 
           <motion.p
@@ -93,8 +93,8 @@ export default function Page() {
           { src: '/img/serie-fade/fade-zero/fade-zero-2.webp', alt: 'FADE-ZERO 2' },
           { src: '/img/serie-fade/fade-zero/fade-zero-3.webp', alt: 'FADE-ZERO 3' },
         ]}
-        title=""
-        description="FADE ZERO, actúa de igual manera que un POP tradicional, pero ofrece una alternativa de activación secundaria en caso de contingencia."
+        title="FADE ZERO actúa de igual manera que un POP tradicional "
+        description="Pero ofrece una alternativa de activación secundaria en caso de contingencia."
         imagePosition="left"
         autoPlay
         autoPlayInterval={3000}
@@ -125,8 +125,8 @@ export default function Page() {
         id="about"
         imageSrc="/img/serie-fade/fade-zero/fade-zero-7.webp"
         imageAlt="Nuestra empresa"
-        title=""
-        description="El sistema FADE ZERO, al igual que las otras herramientas FADE, posee dos cúpulas cerámicas capaces de resistir las presiones y condiciones mas extremas. Su operación se basa un sistema de pines de cizallamiento que pueden ser cambiados fácilmente en el campo. Estos pines actúan cuando la presión diferencial tubería vs yacimiento es alcanzada mediante el incremento de presión desde superficie.
+        title="El sistema FADE ZERO, al igual que las otras herramientas FADE, posee dos cúpulas cerámicas capaces de resistir las presiones y condiciones mas extremas"
+        description="Su operación se basa un sistema de pines de cizallamiento que pueden ser cambiados fácilmente en el campo. Estos pines actúan cuando la presión diferencial tubería vs yacimiento es alcanzada mediante el incremento de presión desde superficie.
 "
         imagePosition="right"
         backgroundColor="bg-transparent"
@@ -139,8 +139,8 @@ export default function Page() {
         id="about"
         imageSrc="/img/serie-fade/fade-zero/fade-zero-6.webp"
         imageAlt="Nuestra empresa"
-        title=""
-        description="En este momento los pines se rompen y las cúpulas se rompen por cilindros internos, estos cilindros endurecidos eliminan cualquier rastro de aristas vivas que pudieran quedar."
+        title="En este momento los pines se rompen y las cúpulas se rompen por cilindros internos"
+        description="Estos cilindros endurecidos eliminan cualquier rastro de aristas vivas que pudieran quedar."
         imagePosition="left"
         backgroundColor="bg-transparent"
         titleColor="text-white"
@@ -152,8 +152,8 @@ export default function Page() {
         id="about"
         imageSrc="/img/serie-fade/fade-zero/fade-zero-4.webp"
         imageAlt="Nuestra empresa"
-        title=""
-        description="FADE ZERO, puede ser adicionado con la herramienta DOT ONE, la cual le otorga un sistema independiente y redundante de activación, también por presión diferencial, esto convierte a FADE ZERO en FADE ZERO.1, una herramienta doblemente segura."
+        title="FADE ZERO, puede ser adicionado con la herramienta DOT ONE"
+        description="La cual le otorga un sistema independiente y redundante de activación, también por presión diferencial, esto convierte a FADE ZERO en FADE ZERO.1, una herramienta doblemente segura."
         imagePosition="right"
         backgroundColor="bg-transparent"
         titleColor="text-white"
