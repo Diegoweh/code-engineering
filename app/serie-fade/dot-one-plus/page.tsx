@@ -74,7 +74,7 @@ export default function Page() {
             variants={itemVariants}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight px-2 font-adelle"
           >
-            DOT-ONE & PLUS
+            DOT ONE (.1) - PlUS (+)
           </motion.h2>
 
           <motion.p
@@ -92,8 +92,8 @@ export default function Page() {
           { src: '/img/serie-fade/dot-one-plus/dot-one-plus-2.webp', alt: 'DOT-ONE PLUS 2' },
           { src: '/img/serie-fade/dot-one-plus/dot-one-plus-3.webp', alt: 'DOT-ONE PLUS 3' },          
         ]}
-        title="DOT-ONE & PLUS (+) Dan aun mayor versatilidad a las herramientas FADE"
-        description="Por ejemplo si se desea tener un mecanismo de respaldo para activación del sistema de cúpulas, puede añadirse a cualquier herramienta FADE el DOT ONE, este adiciona un mecanismo independiente que acciona la cúpula cerámica por presión diferencial."
+        title="DOT ONE (.1) - PlUS (+) Dan aun mayor versatilidad a las herramientas FADE, "
+        description="por ejemplo si se desea tener un mecanismo de respaldo para activación del sistema de cúpulas, puede añadirse a cualquier herramienta FADE el DOT ONE, este adiciona un mecanismo independiente que acciona la cúpula cerámica por presión diferencial."
         imagePosition="left"
         autoPlay
         autoPlayInterval={3000}
@@ -124,8 +124,8 @@ export default function Page() {
         id="about"
         imageSrc="/img/serie-fade/dot-one-plus/dot-one-plus-4.webp"
         imageAlt="Nuestra empresa"
-        title="PLUS (+) ofrece un sistema de protección contra activación accidental del sistema FADE"
-        description="De manera que puedan hacerse operaciones como asentamiento de packer, reemplazo de fluido de terminación o prueba de tubería, sin que ningún pico de presión active la cúpula cerámica. "
+        title="PLUS (+) ofrece un sistema de protección contra activación accidental del sistema FADE,"
+        description="de manera que puedan hacerse operaciones como asentamiento de packer, reemplazo de fluido de terminación o prueba de tubería, sin que ningún pico de presión active la cúpula cerámica. "
         imagePosition="right"
         backgroundColor="bg-transparent"
         titleColor="text-white"
@@ -137,7 +137,7 @@ export default function Page() {
         id="about"
         imageSrc="/img/serie-fade/dot-one-plus/dot-one-plus-5.webp"
         imageAlt="Nuestra empresa"
-        title="PLUS, bloquea la herramienta FADE hasta que se aliviane la columna hidrostática dentro de la tubería"
+        title="PLUS, bloquea la herramienta FADE hasta que se aliviane la columna hidrostática dentro de la tubería,"
         description="La presión de yacimiento supere a la presión de la tubería, solo en este momento, PLUS libera el mecanismo para que la herramienta FADE pueda ser activada por un pulso de presión."
         imagePosition="left"
         backgroundColor="bg-transparent"

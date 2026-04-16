@@ -8,6 +8,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileToolsOpen, setMobileToolsOpen] = useState(false);
+  const [desktopToolsOpen, setDesktopToolsOpen] = useState(false);
   const [language, setLanguage] = useState('ES');
   const toolLinks = [
     { href: '/fill-d', label: 'FILL-D', children: [] },
@@ -41,6 +42,10 @@ export default function Navbar() {
   const closeMobileMenu = () => {
     setMobileMenuOpen(false);
     setMobileToolsOpen(false);
+  };
+
+  const closeDesktopToolsMenu = () => {
+    setDesktopToolsOpen(false);
   };
 
   const toggleLanguage = () => {
@@ -81,10 +86,18 @@ export default function Navbar() {
             >
               Nosotros
             </Link>
-            <div className="relative group">
+            <div
+              className="relative"
+              onMouseEnter={() => setDesktopToolsOpen(true)}
+              onMouseLeave={closeDesktopToolsMenu}
+            >
               <button
                 type="button"
+                onFocus={() => setDesktopToolsOpen(true)}
+                onClick={() => setDesktopToolsOpen((open) => !open)}
                 className="text-white hover:text-orange-400 transition-colors font-medium inline-flex items-center gap-1"
+                aria-expanded={desktopToolsOpen}
+                aria-haspopup="menu"
               >
                 Herramientas
                 <svg
@@ -96,7 +109,11 @@ export default function Navbar() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              <div className="absolute left-1/2 -translate-x-1/2 top-full mt-3 w-52 rounded-xl border border-white/20 bg-black/95 backdrop-blur-md shadow-xl p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-200">
+              <div
+                className={`absolute left-1/2 -translate-x-1/2 top-full mt-3 w-52 rounded-xl border border-white/20 bg-black/95 backdrop-blur-md shadow-xl p-2 transition-all duration-200 ${
+                  desktopToolsOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+                }`}
+              >
                 {toolLinks.map((tool) =>
                   tool.children.length > 0 ? (
                     <div key={tool.href} className="relative group/sub">
@@ -111,6 +128,7 @@ export default function Navbar() {
                           <Link
                             key={child.href}
                             href={child.href}
+                            onClick={closeDesktopToolsMenu}
                             className="block text-white hover:text-orange-400 transition-colors px-3 py-2 rounded-lg hover:bg-white/10 text-sm"
                           >
                             {child.label}
@@ -122,6 +140,7 @@ export default function Navbar() {
                     <Link
                       key={tool.href}
                       href={tool.href}
+                      onClick={closeDesktopToolsMenu}
                       className="block text-white hover:text-orange-400 transition-colors px-3 py-2 rounded-lg hover:bg-white/10"
                     >
                       {tool.label}

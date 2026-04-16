@@ -86,7 +86,7 @@ export default function Page() {
             variants={itemVariants}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight px-2 font-adelle"
           >
-            FLUID-RD - FLUID +
+            FLUID - RD・FLUID +
           </motion.h2>
 
           {/* <motion.p
@@ -118,8 +118,8 @@ export default function Page() {
               { src: '/img/fluid-rd/fluid-rd-6.webp', alt: 'Description 2' },
               { src: '/img/fluid-rd/fluid-rd-7.webp', alt: 'Description 3' },
             ]}
-            title="Tras finalizar la terminación del pozo y antes de expulsar el POP o romper el domo cerámico"
-            description="Suele reemplazarse el fluido de terminación por uno más liviano para reducir la presión hidrostática, facilitar el flujo a superficie y evitar dañar el reservorio por sobrepresión. Este cambio se realiza comúnmente mediante una camisa de circulación abierta con slickline o coiled tubing, desplazando el fluido por el anular. Sin embargo, este procedimiento implica riesgos operativos y costos adicionales innecesarios."
+            title="Luego de que las operaciones de terminación llegan a su fin, y antes de expulsar el POP o romper el domo cerámico, la mayoría de las veces es necesario remplazar el fluido de terminación por uno más liviano con el fin de alivianar la columna hidrostática y permitir que el pozo fluya a superficie evitando además que el reservorio se vea afectado por la sobre presión que pueda ejercer ese fluido."
+            description="La manera más común de hacer este procedimiento es mediante una camisa o manga de circulación, la cual puede ser abierta con slickline o coiled tubing, luego de abiertas el fluido puede ser cambiado desplazándolo anular-tubería a través de las ventanas de la camisa de circulación."
             imagePosition="left"
             autoPlay
             autoPlayInterval={3000}
@@ -129,8 +129,8 @@ export default function Page() {
             id="about"
             imageSrc="/img/fluid-rd/fluid-rd-2.webp"
             imageAlt="Nuestra empresa"
-            title="FLUID-RD y FLUID+ de CODE® Engineering"
-            description="Resuelven este problema. Estas herramientas están diseñadas para realizar este procedimiento de manera que se minimice la intervención de slickline o coiled tubing."
+            title="FLUID-RD y FLUID+ de CODE® Engineering, resuelven este problema."
+            description="Estas herramientas están diseñadas para realizar este procedimiento de manera que se minimice la intervención de slickline o coiled tubing."
             imagePosition="right"
             backgroundColor="bg-transparent"
             titleColor="text-white"
@@ -164,8 +164,8 @@ export default function Page() {
 
         <VideoTextSection
           videoSrc="/video/fluid-rd/fluid-rd-section.mp4"
-          title="Esta herramienta en cualquiera de sus dos versiones forma parte de la terminación superior"
-          description="Bajándose en posición cerrada por encima de la espiga de sellos, luego de que las operaciones de asentamiento y prueba de tubería han terminado, mediante un pulso de presión anular la herramienta es abierta por presión diferencial anular-tubería, esto crea una comunicación que es mayor que el área de flujo de la sarta de terminación, de esta forma se desplaza el fluido desde el anular hasta la tubería."
+          title="Esta herramienta en cualquiera de sus dos versiones forma parte de la terminación superior,"
+          description="bajándose en posición cerrada por encima de la espiga de sellos, luego de que las operaciones de asentamiento y prueba de tubería han terminado, mediante un pulso de presión anular la herramienta es abierta por presión diferencial anular-tubería, esto crea una comunicación que es mayor que el área de flujo de la sarta de terminación, de esta forma se desplaza el fluido desde el anular hasta la tubería."
           videoPosition="left"
         />
 
@@ -173,8 +173,8 @@ export default function Page() {
             id="about"
             imageSrc="/img/fluid-rd/fluid-rd-4.webp"
             imageAlt="Nuestra empresa"
-            title="Una vez desplazado el fluido las herramientas FLUID-RD y FLUID+ pueden cerrarse con operadoras convencionales"
-            description="Permanecen en el pozo funcionando como camisa de circulación permitiendo múltiples aperturas y cierres mecánicos. Además, FLUID+ incorpora una cámara de compensación que actúa como “booster” en pozos con fluidos de terminación muy pesados. Ambas herramientas son aptas para pozos horizontales o altamente desviados."
+            title="Una vez desplazado el fluido las herramientas FLUID-RD y FLUID+ pueden cerrarse con operadoras convencionales."
+            description="Este dispositivo permanece en el pozo y hace las veces de camisa de circulación, por lo cual puede abrirse o cerrarse múltiples veces de manera mecánica. FLUID+ posee además una cámara de compensación que actúa como “Booster” para pozos con fluidos de terminación muy pesados. Ambas herramientas pueden ser bajadas en pozos horizontales o altamente desviados."
             imagePosition="right"
             backgroundColor="bg-transparent"
             titleColor="text-white"

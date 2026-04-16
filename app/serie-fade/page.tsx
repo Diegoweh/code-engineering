@@ -92,7 +92,7 @@ export default function Page() {
             variants={itemVariants}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight px-2 font-adelle"
           >
-            SERIE FADE
+            TORPEDO
           </motion.h2>
 
           {/* <motion.p
@@ -119,16 +119,17 @@ export default function Page() {
 
         <CarouselTextSection
             images={[
-              { src: '/img/serie-fade/serie-fade-2.webp', alt: 'Description 1' },
               { src: '/img/serie-fade/serie-fade-1.webp', alt: 'Description 0' },
+              { src: '/img/serie-fade/serie-fade-2.webp', alt: 'Description 1' },
               { src: '/img/serie-fade/serie-fade-3.webp', alt: 'Description 2' },
               { src: '/img/serie-fade/serie-fade-4.webp', alt: 'Description 3' },
             ]}
-            title="Un diseño simple e inteligente que permite"
-            description="“ROMPER” las cúpulas cerámicas o barreras de cristal sin intervención de coiled tubing y sin explosivos ni baterías."
+            title="Un diseño simple e inteligente que permite romper las cúpulas cerámicas o barreras de cristal sin intervención de coiled tubing y sin explosivos ni baterías."
+            description=""
             imagePosition="left"
             autoPlay
             autoPlayInterval={3000}
+            showDescriptionToggle={false}
           /> 
 
         {/* <ImageTextSection
@@ -145,9 +146,10 @@ export default function Page() {
 
         <VideoTextSection
           videoSrc="/video/serie-fade/serie-fade-2-compressed.mp4"
-          title="Se lanza dentro de la tubería y al llegar al fondo"
-          description="Dispara un proyectil que impacta la cúpula cerámica. La fuerza para este disparo está basada en diferenciales de presión, por lo cual no usa electrónica ni explosivos"
+          title="Se lanza dentro de la tubería y al llegar al fondo dispara un proyectil que impacta la cúpula cerámica. La fuerza para este disparo está basada en diferenciales de presión, por lo cual no usa electrónica ni explosivos."
+          description=""
           videoPosition="right"
+          showDescriptionToggle={false}
         />
 
         <VideoBanner

@@ -47,7 +47,7 @@ export default function Page() {
           playsInline
           aria-label="Video de fondo"
         >
-          <source src="/video/serie-fade/serie-fade-tools-compressed.mp4" type="video/mp4" />
+          <source src="/video/fade-zero/fade-zero-compressed.mp4" type="video/mp4" />
           <track kind="captions" />
           Tu navegador no soporta el tag de video.
         </video>
@@ -74,7 +74,7 @@ export default function Page() {
             variants={itemVariants}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight px-2 font-adelle"
           >
-            FADE-ZERO
+            FADE ZERO
           </motion.h2>
 
           <motion.p
@@ -93,16 +93,17 @@ export default function Page() {
           { src: '/img/serie-fade/fade-zero/fade-zero-2.webp', alt: 'FADE-ZERO 2' },
           { src: '/img/serie-fade/fade-zero/fade-zero-3.webp', alt: 'FADE-ZERO 3' },
         ]}
-        title="FADE ZERO actúa de igual manera que un POP tradicional "
-        description="Pero ofrece una alternativa de activación secundaria en caso de contingencia."
+        title="FADE ZERO actúa de igual manera que un POP tradicional, pero ofrece una alternativa de activación secundaria en caso de contingencia. "
+        description=""
         imagePosition="left"
         autoPlay
         autoPlayInterval={3000}
+        showDescriptionToggle={false}
       />
 
       <VideoBanner
         id="innovation"
-        videoSrc="/video/serie-fade/serie-fade-tools-compressed.mp4"
+        videoSrc="/video/fade-zero/fade-zero-compressed.mp4"
         overlayOpacity={0.0}
         overlayColor="bg-black"
         height="screen"
@@ -114,7 +115,7 @@ export default function Page() {
       </VideoBanner>
 
       {/* <VideoTextSection
-        videoSrc="/video/serie-fade/serie-fade-tools-compressed.mp4"
+        videoSrc="/video/fade-zero/fade-zero-compressed.mp4"
         title="FADE-ZERO"
         description="Diseño robusto y confiable que permite operaciones seguras y eficientes, reduciendo los tiempos de intervención y los costos operacionales asociados."
         videoPosition="right"
@@ -125,9 +126,8 @@ export default function Page() {
         id="about"
         imageSrc="/img/serie-fade/fade-zero/fade-zero-7.webp"
         imageAlt="Nuestra empresa"
-        title="El sistema FADE ZERO, al igual que las otras herramientas FADE, posee dos cúpulas cerámicas capaces de resistir las presiones y condiciones mas extremas"
-        description="Su operación se basa un sistema de pines de cizallamiento que pueden ser cambiados fácilmente en el campo. Estos pines actúan cuando la presión diferencial tubería vs yacimiento es alcanzada mediante el incremento de presión desde superficie.
-"
+        title="El sistema FADE ZERO, al igual que las otras herramientas FADE, posee dos cúpulas cerámicas capaces de resistir las presiones y condiciones mas extremas."
+        description="Su operación se basa un sistema de pines de cizallamiento que pueden ser cambiados fácilmente en el campo. Estos pines actúan cuando la presión diferencial tubería vs yacimiento es alcanzada mediante el incremento de presión desde superficie."
         imagePosition="right"
         backgroundColor="bg-transparent"
         titleColor="text-white"
@@ -139,12 +139,13 @@ export default function Page() {
         id="about"
         imageSrc="/img/serie-fade/fade-zero/fade-zero-6.webp"
         imageAlt="Nuestra empresa"
-        title="En este momento los pines se rompen y las cúpulas se rompen por cilindros internos"
-        description="Estos cilindros endurecidos eliminan cualquier rastro de aristas vivas que pudieran quedar."
+        title="En este momento los pines se rompen y las cúpulas se rompen por cilindros internos, estos cilindros endurecidos eliminan cualquier rastro de aristas vivas que pudieran quedar."
+        description=""
         imagePosition="left"
         backgroundColor="bg-transparent"
         titleColor="text-white"
         descriptionColor="text-gray-300"
+        showDescriptionToggle={false}
       />
 
       {/* Sección con imagen y texto */}
@@ -152,12 +153,13 @@ export default function Page() {
         id="about"
         imageSrc="/img/serie-fade/fade-zero/fade-zero-4.webp"
         imageAlt="Nuestra empresa"
-        title="FADE ZERO, puede ser adicionado con la herramienta DOT ONE"
-        description="La cual le otorga un sistema independiente y redundante de activación, también por presión diferencial, esto convierte a FADE ZERO en FADE ZERO.1, una herramienta doblemente segura."
+        title="FADE ZERO, puede ser adicionado con la herramienta DOT ONE, la cual le otorga un sistema independiente y redundante de activación, también por presión diferencial, esto convierte a FADE ZERO en FADE ZERO.1, una herramienta doblemente segura."
+        description=""
         imagePosition="right"
         backgroundColor="bg-transparent"
         titleColor="text-white"
         descriptionColor="text-gray-300"
+        showDescriptionToggle={false}
       />
 
       {/* Serie Fade sub-tools grid */}

@@ -47,7 +47,7 @@ export default function Page() {
           playsInline
           aria-label="Video de fondo"
         >
-          <source src="/video/serie-fade/serie-fade-tools-compressed.mp4" type="video/mp4" />
+          <source src="/video/fade-one/fade-one-compressed.mp4" type="video/mp4" />
           <track kind="captions" />
           Tu navegador no soporta el tag de video.
         </video> 
@@ -74,7 +74,7 @@ export default function Page() {
             variants={itemVariants}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight px-2 font-adelle"
           >
-            FADE-ONE
+            FADE ONE
           </motion.h2>
 
           {/* <motion.p
@@ -89,12 +89,13 @@ export default function Page() {
 
       <CarouselTextSection
         images={[
-          { src: '/img/serie-fade/fade-one/fade-one.webp', alt: 'FADE-ONE' },          
-          
+          { src: '/img/serie-fade/fade-one/fade-one.webp', alt: 'FADE-ONE' },
+          { src: '/img/serie-fade/fade-one/fade-one-2.webp', alt: 'FADE-ONE 2' },
+          { src: '/img/serie-fade/fade-one/fade-one-3.webp', alt: 'FADE-ONE 3' },
           { src: '/img/serie-fade/fade-one/fade-one-4.webp', alt: 'FADE-ONE 4' },
         ]}
-        title="FADE ONE de CODE ENGINEERING®, está pensado para que, de la manera más sencilla, se elimine la posibilidad de ese evento indeseado"
-        description="Su concepto es simple, dos cúpulas cerámicas enfrentadas por sus caras cóncavas, las cuales por su geometría pueden resistir las más altas presiones y ambientes agresivos. Entre las cúpulas se forma una cámara atmosférica protegida por sistema s de sellos redundantes."
+        title="FADE ONE, al igual que las otras herramientas de la serie FADE, está diseñada para hacer las veces de un POP pero de manera más confiable y precisa."
+        description="Cuando nos enfrentamos a altas presiones de yacimiento, expulsar un POP estándar, puede llegar ser una labor difícil, una presión muy alta puede hacer las veces de candado hidráulico que impida el desplazamiento del POP. FADE ONE, de CODE ENGINEERING®, está pensado para que, de la manera más sencilla, se elimine la posibilidad de ese evento indeseado. Su concepto es simple, dos cúpulas cerámicas enfrentadas por sus caras cóncavas, las cuales por su geometría pueden resistir las más altas presiones y ambientes agresivos. Entre las cúpulas se forma una cámara atmosférica protegida por sistema s de sellos redundantes."
         imagePosition="left"
         autoPlay
         autoPlayInterval={3000}
@@ -102,7 +103,7 @@ export default function Page() {
 
       <VideoBanner
         id="innovation"
-        videoSrc="/video/serie-fade/serie-fade-tools-compressed.mp4"
+        videoSrc="/video/fade-one/fade-one-compressed.mp4"
         overlayOpacity={0.0}
         overlayColor="bg-black"
         height="screen"
@@ -114,7 +115,7 @@ export default function Page() {
       </VideoBanner>
 
       {/* <VideoTextSection
-        videoSrc="/video/serie-fade/serie-fade-tools-compressed.mp4"
+        videoSrc="/video/fade-one/fade-one-compressed.mp4"
         title=""
         description="Cuando las operaciones de terminación finalizan, la cúpula superior se rompe mecánicamente, esto se logra mediante la herramienta de CODE conocida como TORPEDO, este se lanza desde superficie y rompe la primera cúpula, la columna hidrostática al entrar en la cámara atmosférica rompe la segunda cúpula. También puede romperse la primera cúpula con Tubería flexible o coiled tubing, hasta aquí el sistema suena parecido a otros del mercado. Sin embargo, los análisis de ingeniería muestras que los sistemas cerámicos convencionales dejan aristas vivas en el mandril o housing de las mismas, CODE ha resuelto este problema colocando cuchillas cilíndricas las cuales actúan eliminando todo restos de cerámica, una vez que la primera cúpula se ha roto, estas aseguran un diámetro interno libre de obstrucciones."
         videoPosition="right"
@@ -125,8 +126,8 @@ export default function Page() {
         id="about"
         imageSrc="/img/serie-fade/fade-one/fade-one.webp"
         imageAlt="Nuestra empresa"
-        title="Cuando las operaciones de terminación finalizan, la cúpula superior se rompe mecánicamente"
-        description="Esto se logra mediante la herramienta de CODE conocida como TORPEDO, este se lanza desde superficie y rompe la primera cúpula, la columna hidrostática al entrar en la cámara atmosférica rompe la segunda cúpula."
+        title="Cuando las operaciones de terminación finalizan, la cúpula superior se rompe mecánicamente, "
+        description="esto se logra mediante la herramienta de CODE conocida como TORPEDO, este se lanza desde superficie y rompe la primera cúpula, la columna hidrostática al entrar en la cámara atmosférica rompe la segunda cúpula. También puede romperse la primera cúpula con Tubería flexible o coiled tubing, hasta aquí el sistema suena parecido a otros del mercado. Sin embargo, los análisis de ingeniería muestras que los sistemas cerámicos convencionales dejan aristas vivas en el mandril o housing de las mismas, CODE ha resuelto este problema colocando cuchillas cilíndricas las cuales actúan eliminando todo restos de cerámica, una vez que la primera cúpula se ha roto, estas aseguran un diámetro interno libre de obstrucciones."
         imagePosition="right"
         backgroundColor="bg-transparent"
         titleColor="text-white"
@@ -138,8 +139,8 @@ export default function Page() {
         id="about"
         imageSrc="/img/serie-fade/fade-one/fade-one-3.webp"
         imageAlt="Nuestra empresa"
-        title="FADE ONE puede transformarse en una herramienta aún más versátil, adicionando en su parte superior “DOT ONE”"
-        description="Esto le otorga a la herramienta un mecanismo de activación remoto por presión diferencial (Tubería-Yacimiento), y si además se le adiciona “PLUS+” se obtiene un sistema completo protegido contra activación accidental por picos de presión durante las operaciones de terminación."
+        title="FADE ONE puede transformarse en una herramienta aún más versátil, adicionando en su parte superior “DOT ONE,"
+        description="esto le otorga a la herramienta un mecanismo de activación remoto por presión diferencial (Tubería-Yacimiento), y si además se le adiciona “PLUS+” se obtiene un sistema completo protegido contra activación accidental por picos de presión durante las operaciones de terminación."
         imagePosition="left"
         backgroundColor="bg-transparent"
         titleColor="text-white"
@@ -151,12 +152,17 @@ export default function Page() {
         id="about"
         imageSrc="/img/serie-fade/fade-one/fade-one-4.webp"
         imageAlt="Nuestra empresa"
-        title="FADE ONE Activa de manera mecánica con TORPEDO o con tubería flexible"
-        description="FADE ONE.1: Activada por presión Diferencial Tubería-Yacimiento. FADE ONE.1+: Activada por presión Diferencial Tubería-Yacimiento. Con mecanismo de protección contra activación previa."
+        title={`FADE ONE: Activa de manera mecánica con TORPEDO o con tubería flexible.
+
+FADE ONE.1: Activada por presión Diferencial Tubería-Yacimiento.
+
+FADE ONE.1+: Activada por presión Diferencial Tubería-Yacimiento. Con mecanismo de protección contra activación previa.`}
+        description=""
         imagePosition="right"
         backgroundColor="bg-transparent"
         titleColor="text-white"
         descriptionColor="text-gray-300"
+        showDescriptionToggle={false}
       />
 
       {/* Serie Fade sub-tools grid */}

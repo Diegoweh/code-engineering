@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { motion, Variants, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
+import { SECTION_DESCRIPTION_CLASS, SECTION_TITLE_CLASS } from '@/lib/sectionTextStyles';
 
 interface ImageTextSectionProps {
   id?: string;
@@ -10,6 +11,7 @@ interface ImageTextSectionProps {
   imageAlt: string;
   title: string;
   description: string;
+  showDescriptionToggle?: boolean;
   imagePosition?: 'left' | 'right';
   backgroundColor?: string;
   titleColor?: string;
@@ -24,6 +26,7 @@ export default function ImageTextSection({
   imageAlt,
   title,
   description,
+  showDescriptionToggle = true,
   imagePosition = 'left',
   backgroundColor = 'bg-transparent',
   titleColor = 'text-white',
@@ -91,23 +94,25 @@ export default function ImageTextSection({
       {/* Contenido de texto */}
       <motion.div
         variants={textVariants}
-        className="w-full lg:w-1/2 flex flex-col justify-center space-y-6 px-6 lg:px-12 text-center md:text-start font-adelle"
+        className="w-full  flex flex-col justify-center space-y-6 px-6 lg:px-12 text-center md:text-start font-adelle"
       >
-        <h2 className={`text-xl md:text-2xl lg:text-3xl text-justify font-bold ${titleColor}`}>
+        <h2 className={`${SECTION_TITLE_CLASS} ${titleColor}`}>
           {title}
         </h2>
         <div className="flex flex-col items-center gap-3">
-          <button
-            type="button"
-            onClick={() => setIsDescriptionVisible((prev) => !prev)}
-            className="text-sm md:text-base font-semibold text-orange-500 underline underline-offset-4 transition-opacity hover:opacity-80"
-            aria-expanded={isDescriptionVisible}
-          >
-            {isDescriptionVisible ? 'Ver menos' : 'Ver más'}
-          </button>
+          {showDescriptionToggle && (
+            <button
+              type="button"
+              onClick={() => setIsDescriptionVisible((prev) => !prev)}
+              className="text-sm md:text-base font-semibold text-orange-500 underline underline-offset-4 transition-opacity hover:opacity-80"
+              aria-expanded={isDescriptionVisible}
+            >
+              {isDescriptionVisible ? 'Ver menos' : 'Ver más'}
+            </button>
+          )}
 
-          {isDescriptionVisible && (
-            <p className={`text-md md:text-lg text-justify leading-relaxed text-center ${descriptionColor}`}>
+          {(!showDescriptionToggle || isDescriptionVisible) && (
+            <p className={`${SECTION_DESCRIPTION_CLASS} ${descriptionColor}`}>
               {description}
             </p>
           )}
