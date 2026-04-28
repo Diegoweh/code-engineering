@@ -4,9 +4,10 @@ import { motion, Variants } from 'framer-motion'
 import Link from 'next/link'
 import { ToolsShowcase } from '@/components/ToolsShowcase'
 import CarouselTextSection from '@/components/CarouselTextSection'
-import VideoTextSection from '@/components/VideoTextSection'
 import ImageTextSection from '@/components/ImageTextSection'
 import VideoBanner from '@/components/VideoBanner'
+import PdfResourceSection from '@/components/PdfResourceSection'
+import VideoLinkSection from '@/components/VideoLinkSection'
 
 const serieFadeTools = [
   { href: '/serie-fade', label: 'TORPEDO' },
@@ -99,6 +100,8 @@ export default function Page() {
         autoPlayInterval={3000}
       />
 
+      <VideoLinkSection productName="FADE TWO" videoHref="#innovation" />
+
       <VideoBanner
         id="innovation"
         videoSrc="/video/fade-two/fade-two-compressed.mp4"
@@ -163,6 +166,8 @@ export default function Page() {
         descriptionColor="text-gray-300"
         showDescriptionToggle={false}
       />
+
+      <PdfResourceSection productName="FADE TWO" pdfSrc="/pdf/fade-two.pdf" />
 
       {/* Serie Fade sub-tools grid */}
       <section className="py-16 px-4 font-adelle">

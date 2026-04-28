@@ -1,13 +1,14 @@
 "use client"
 
 import React from 'react'
-import Image from 'next/image'
 import { motion, Variants } from 'framer-motion'
 import ImageTextSection from '@/components/ImageTextSection'
 import VideoBanner from '@/components/VideoBanner'
 import { ToolsShowcase } from '@/components/ToolsShowcase'
 import CarouselTextSection from '@/components/CarouselTextSection'
 import VideoTextSection from '@/components/VideoTextSection'
+import PdfResourceSection from '@/components/PdfResourceSection'
+import VideoLinkSection from '@/components/VideoLinkSection'
 
 export default function Page() {
   const containerVariants: Variants = {
@@ -27,15 +28,6 @@ export default function Page() {
     },
   }
 
-  const logoVariants: Variants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: { duration: 1, ease: [0.42, 0, 0.58, 1] as const },
-    },
-  }
- 
   return (
     <main className="min-h-screen">
       {/* Hero / Video header */}
@@ -137,6 +129,8 @@ export default function Page() {
             descriptionColor="text-gray-300"
         />
 
+        <VideoLinkSection productName="FLUID - RD・FLUID +" videoHref="#innovation" />
+
         <VideoBanner
           id="innovation"
           videoSrc="/video/fluid-rd/fluid-rd-compressed.mp4"
@@ -180,6 +174,8 @@ export default function Page() {
             titleColor="text-white"
             descriptionColor="text-gray-300"
         />
+
+        <PdfResourceSection productName="FLUID - RD・FLUID +" pdfSrc="/pdf/fluid-rd.pdf" />
 
         <ToolsShowcase excludeId="fluid-rd" />
             

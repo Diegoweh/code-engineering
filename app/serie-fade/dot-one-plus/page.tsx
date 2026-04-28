@@ -4,9 +4,9 @@ import { motion, Variants } from 'framer-motion'
 import Link from 'next/link'
 import { ToolsShowcase } from '@/components/ToolsShowcase'
 import CarouselTextSection from '@/components/CarouselTextSection'
-import VideoTextSection from '@/components/VideoTextSection'
 import ImageTextSection from '@/components/ImageTextSection'
 import VideoBanner from '@/components/VideoBanner'
+import VideoLinkSection from '@/components/VideoLinkSection'
 
 const serieFadeTools = [
   { href: '/serie-fade', label: 'TORPEDO' },
@@ -98,6 +98,8 @@ export default function Page() {
         autoPlay
         autoPlayInterval={3000}
       />
+
+      <VideoLinkSection productName="DOT ONE (.1) - PLUS (+)" videoHref="#innovation" />
 
       <VideoBanner
         id="innovation"

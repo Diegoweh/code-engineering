@@ -2,11 +2,11 @@
 
 import { motion, Variants } from 'framer-motion'
 import Link from 'next/link'
-import ImageTextSection from '@/components/ImageTextSection'
 import VideoBanner from '@/components/VideoBanner'
 import { ToolsShowcase } from '@/components/ToolsShowcase'
 import CarouselTextSection from '@/components/CarouselTextSection'
 import VideoTextSection from '@/components/VideoTextSection'
+import VideoLinkSection from '@/components/VideoLinkSection'
 
 const serieFadeTools = [
   { href: '/serie-fade/dot-one-plus', label: 'DOT-ONE PLUS' },
@@ -33,15 +33,6 @@ export default function Page() {
     },
   }
 
-  const logoVariants: Variants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: { duration: 1, ease: [0.42, 0, 0.58, 1] as const },
-    },
-  }
- 
   return (
     <main className="min-h-screen">
       {/* Hero / Video header */}
@@ -151,6 +142,8 @@ export default function Page() {
           videoPosition="right"
           showDescriptionToggle={false}
         />
+
+        <VideoLinkSection productName="TORPEDO" videoHref="#innovation" />
 
         <VideoBanner
           id="innovation"

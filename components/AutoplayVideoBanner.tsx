@@ -138,8 +138,8 @@ export default function AutoplayVideoBanner({
     video.addEventListener('playing', handlePlaying);
     video.addEventListener('pause', handlePause);
 
-    // Intento inicial inmediato
-    forcePlay();
+    // Intento inicial
+    const initialTimer = setTimeout(forcePlay, 0);
 
     // Intento después de 100ms
     const timer1 = setTimeout(forcePlay, 100);
@@ -156,6 +156,7 @@ export default function AutoplayVideoBanner({
       video.removeEventListener('loadedmetadata', handleLoadedMetadata);
       video.removeEventListener('playing', handlePlaying);
       video.removeEventListener('pause', handlePause);
+      clearTimeout(initialTimer);
       clearTimeout(timer1);
       clearTimeout(timer2);
       clearTimeout(timer3);
